@@ -1,0 +1,158 @@
+// $Id$
+
+// - - - - - - - Bootstrap variables (override values in vendor_bundled/vendor/twbs/bootstrap/scss/_variables.scss - - - - - - //
+
+// Colors
+$white:    #fff !default;
+ $gray-100: #f8f9fa !default;
+ $gray-200: #e9ecef !default;
+ $gray-300: #dee2e6 !default;
+ $gray-400: #ced4da !default;
+ $gray-500: #adb5bd !default;
+ $gray-600: #868e96 !default;
+ $gray-700: #495057 !default;
+ $gray-800: #343a40 !default;
+ $gray-900: #212529 !default;
+ $black:    #000 !default;
+
+$primary: #1174a5;
+$success: #56ca75;
+$secondary: #8452af;
+$info: #4d3a7d;
+//$warning: #debb27;
+//$danger: #df6e1e;
+
+$theme-colors: (
+ 	"primary":        	#1174a5,
+ 	"secondary": #8452af,
+// 	"success":         	#5cb85c,
+ 	"info":           	#5bc0de
+// 	"warning":         	#f0ad4e,
+// 	"danger":          	#d9534f,
+//	"light":			#ffffff,
+// 	"dark":				#000000
+);
+
+// Options
+// Spacing
+
+// Body
+$body-color: $gray-800;
+$body-bg: #fff;
+// Links
+$link-hover-decoration: none;
+// Components
+//$padding-base-vertical: .5rem;
+//$padding-large-vertical: .9rem;
+
+// Fonts
+$font-family-sans-serif: Lato, sans-serif;
+$headings-font-family: $font-family-sans-serif;
+$headings-font-weight: 700;
+
+// Tables
+//$table-border-color: #dddddd;
+
+// Buttons
+//$btn-default-color: #ffffff;
+//$btn-default-bg: #3676c4;
+//$btn-default-border: #3676c4;
+
+//$btn-primary-color: #ffffff;
+//$btn-primary-bg: #3676c4;
+
+// Forms
+//$input-border-color: #dddddd;
+// Dropdowns
+$dropdown-bg: #1376a8;
+$dropdown-link-color: $gray-200;
+$dropdown-link-hover-color: #ffffff;
+$dropdown-link-hover-bg: darken(#1376a8, 10%);
+$dropdown-link-active-bg: #0e567a;
+$dropdown-header-color: #fff;
+// Navs
+$nav-tabs-border-color:             $gray-300;
+// Navbar
+$navbar-height: 30px;
+//$navbar-dark-color: #ffffff;
+//$navbar-dark-bg: #1f5daa;
+$navbar-primary-bg: #28aae1;
+$bg-dark: #28aae1;
+//$navbar-dark-border: darken($navbar-dark-bg, 6.5%);
+
+// Navbarlinks ??
+$navbar-dark-color: #ffffff;
+$navbar-dark-hover-color: #f9f9f9;
+$navbar-dark-hover-bg: darken($primary, 6.5%);
+$navbar-dark-active-color: #ffffff;
+$navbar-dark-active-bg: darken($primary, 6.5%);
+$navbar-dark-disabled-color: #cccccc;
+
+// Pagination
+// Jumbotron
+// Cards
+$card-header-bg: transparent;
+//$card-border-radius: $border-radius-lg;
+$card-text: $body-color;
+$card-header-bg: transparent;
+//$card-bg: transparent;
+//$card-border-color: transparent;
+//$card-inner-border: transparent;
+$card-spacer-y: 0.5rem;
+$card-spacer-x: 1rem;
+
+// Tooltips
+// Popovers
+$popover-body-color: $body-color;
+
+// Badges
+// Modals
+//$modal-header-border-color: #386dbb;
+// $modal-content-bg
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Close
+// Code
+
+// - - - - - - - - - -  - - - - - - Other variables, if any - - - - - - - - - - - - - - - - - //
+
+// - - - - - - - - - - Tiki selector variables ( for _tiki-selectors.scss ) - - - - - - - - - //
+
+// $Id$ tiki-selector-variables.scss file, to provide values for "legacy" Tiki CSS selectors (not covered by Bootstrap).
+// These FiveAlive-lite theme option values are used by themes/fivealive-lite/less/_tiki-selectors.scss
+
+$imagePath: "../images/";
+$side-column-border: none;
+$side-column-card-header-background: #ffffff;
+// #f5399c
+$side-column-card-header-color: #1174a5;
+// #3f1020;
+$side-column-card-header-border-color: #1174a5;
+$side-column-card-header-border-width: 0 0 1px 0;
+$header_outer-background: darken(#28aae1, 10%);
+// url('#{$imagePath}siteheadertile.png') 0 0 no-repeat;
+$header_container_header-background: url('#{$imagePath}siteheader.png') -248px 0 no-repeat;
+$header-color: #ffffff;
+$topbar_container_background: #28aae1;
+$topbar-bg: #28a7de;
+$form-control-background: #ffffff;
+$form-control-border-colors: #9ae8fa #e3f7fb #e3f7fb #9ae8fa;
+$footer-color: #696969;
+$footer-border-color: #28aae1;
+$footer-link-color: #a9a9a9;
+$navbar-dark-navbar-nav-li-a-background: #28aae1;
+$postbody-title-background: $header_outer-background;
+$postbody-title-color: #000000;
+// url('#{$imagePath}siteheader.png') no-repeat -480px -200px;
+$brand-primary-of-option: $primary;
+$navbar-default-link-background: $navbar-dark-navbar-nav-li-a-background;
+$side-column-border: none;
+$topbar_container_background: $navbar-dark-navbar-nav-li-a-background;
+$navbar-fixed-height: 46px;
+// .secondary_site_menu .navbar-nav li.dropdown { border-bottom: none;}
+$middle_outer-inset-shadow-bg: $topbar-bg;

@@ -1,0 +1,29 @@
+// $Id$
+/* The Darkshine theme for Tiki Wiki CMS Groupware */
+
+@import "variables"; // Needs to come first, to override defaults.
+@import "../../../vendor_bundled/vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "../../base_files/scss/_tiki-variables.scss"; // Values/definitions for Tiki variables (outside of Bootstrap variables) such as _tiki-selectors.scss.
+@import "../../base_files/scss/_tiki-selectors.scss";
+@import "../../base_files/scss/_bs3-bs4-transition.scss";
+@import "_tiki-selectors.scss";
+@import "../../base_files/scss/_external-scripts.scss";
+
+
+// override for converseJS chatbox background colors
+.tiki #conversejs, .tiki #conversejs.converse-embedded {
+	#controlbox {
+		.box-flyout { background-color: #f3f3f3; }
+    }
+
+	.chatbox {
+		.box-flyout {
+			background-color: #f3f3f3;
+        }
+    }
+}
+
+// override for some cypht background colors
+body.tiki.tiki-webmail {
+	background: #90140c url('#{$imagePath}stripes.png') repeat-x 50% 0;
+}

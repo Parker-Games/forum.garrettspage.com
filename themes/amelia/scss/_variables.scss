@@ -1,0 +1,125 @@
+// $Id$
+// Amelia for Bootstrap 4
+// Variables
+
+// - - - - - - - Bootstrap variables (override values in vendor_bundled/vendor/twbs/bootstrap/scss/_variables.scss - - - - - - //
+
+// Colors
+$gray-900: #111111;
+$gray-700: #444444;
+$gray-500: lighten(#000000, 33.5%); //
+$gray-300: #bbbbbb;
+$gray-100: #dddddd;
+$white: #fff;
+$black: #000;
+
+$primary: #ad1d28; //These aren't overriding the defaults in this position, so were added to amelia.scss at the top.
+$secondary: #82241b;
+$success: #48ca3b;
+$info:    #4d3a7d;
+$warning: #debb27;
+$danger:  #df6e1e;
+
+$theme-colors: (
+	"primary":        	#ad1d28,
+	"secondary": 		#82241b,
+	"success":         	#48ca3b,
+	"info":           	#4d3a7d,
+	"warning":         	#debb27,
+	"danger":          	#df6e1e,
+	"light":			#18cbd8,
+	"dark":				#ad1d28
+);
+
+// Options
+// Spacing
+// Body
+$body-bg: #108a93;
+$body-color: #fff;
+
+// Links
+$link-color: lighten($warning, 15%);
+$link-hover-color: $link-color;
+$link-hover-decoration: underline;
+
+//Components
+$padding-base-vertical: .5rem;
+$padding-large-vertical: .9rem;
+
+//Fonts
+$font-family-sans-serif: "Cabin", Arial, sans-serif;
+$headings-font-family: 'Lobster', cursive;
+
+// Tables
+$table-head-bg: #108a93;
+$table-head-color: #fff;
+// Forms
+// Dropdowns
+$dropdown-link-color: 				#fff;
+$dropdown-bg:                      #fff;
+$dropdown-border-color:            #444;
+$dropdown-link-color:              #444;
+$dropdown-link-hover-color:        #fff;
+$dropdown-link-hover-bg:           #15b5c1;
+
+// Navs
+// Navbar
+$navbar-dark-color:                 $link-color;
+$navbar-dark-hover-color:           lighten($navbar-dark-color, 25%);
+$navbar-dark-active-color:          $navbar-dark-color;
+$navbar-dark-disabled-color:        lighten($navbar-dark-color, 50%);
+
+$navbar-light-color:                rgba($black, .5) !default;
+$navbar-light-hover-color:          rgba($black, .7) !default;
+$navbar-light-active-color:         rgba($black, .9) !default;
+$navbar-light-disabled-color:       rgba($black, .3) !default;
+
+// Navbarlinks
+// Pagination
+$pagination-bg: lighten($body-bg, 10%);
+
+// Jumbotron
+$jumbotron-bg: darken($body-bg, 5%);
+
+// Cards
+// Tooltips
+// Popovers
+$popover-bg: #13a0aa;
+$popover-body-color: #fff;
+$popover-header-bg: #18cbd8;
+$popover-header-color: #fff;
+
+// Badges
+// Modals
+$modal-content-bg: $body-bg;
+// Alerts
+// Progress bars
+// List group
+$list-group-bg: $body-bg;
+// Image thumbnails
+// Figures
+// Breadcrumbs
+$breadcrumb-bg: lighten($body-bg, 10%);
+
+// Carousel
+// Close
+// Code
+
+$bg-dark: #ad1d28 !important;
+$navbar-dark-bg: #ad1d28 !important;
+body.fullscreen { background: $body-bg; }
+.bg-dark { background: #ad1d28 !important; }
+
+// - - - - - - - - - -  - - - - - - Other variables, if any - - - - - - - - - - - - - - - - - //
+
+body.fullscreen { background: $body-bg; }
+
+$link-color: lighten($warning, 15%);
+$gray-500: lighten(#000000, 33.5%); //
+$link-hover-color: $link-color; // This has to be here because #link-color is defined by bs default, not be amelia.
+$body-bg: #108a93; // These work here, but not in amelia/bootstrap-variables, for some reason.
+$body-color: #ffffff; // "
+body.fullscreen { background-color: $body-bg; } // Moved here because it needs $body-bg
+
+$blockquote-color: #e5e5e5;
+$blockquote-left-border-color: #e5e5e5;

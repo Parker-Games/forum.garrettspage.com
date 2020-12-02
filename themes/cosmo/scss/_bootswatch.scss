@@ -1,0 +1,44 @@
+// Cosmo 4.0.0
+// Bootswatch
+
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" !default;
+@import url($web-font-path);
+
+// Navbar ======================================================================
+
+// Buttons =====================================================================
+
+// Typography ==================================================================
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+// Tables ======================================================================
+
+// Forms =======================================================================
+
+// Navs ========================================================================
+
+// Indicators ==================================================================
+
+// Progress bars ===============================================================
+
+.progress {
+  @include box-shadow(none);
+  .progress-bar {
+    font-size: 8px;
+    line-height: 8px;
+  }
+}
+
+// Containers ==================================================================
+
+// So form submit buttons with icons and text used in popover actions can look just like links
+.popover button.btn-link.link-list,
+.popover button.btn-link.link-list .icon {
+	font-size: $popover-font-size;
+}

@@ -1,0 +1,135 @@
+// $Id$
+// This file is for additional LESS rules beyond what are in variables.scss.
+// Image path example:
+// $imagePath: "../images/";
+// body {
+//	background-image: url('#{$imagePath}bg.jpg');
+// }
+//
+
+
+.container { background: #fff; }
+
+.bg-dark .container { background: $dark; }
+
+body > .container {
+	border: solid #aaaaaa;
+	border-width: 0 1px;
+}
+
+body > .container, // basic layout (bootstrap)
+.header_container > .container,
+.header_container.container {
+	border: solid #aaaaaa;
+	border-width: 1px 1px 0 1px;
+	margin-top: 20px;
+}
+
+body > .container {
+	.topbar {
+		margin-bottom: 20px;}
+}
+
+.middle_outer > .container {
+	border: solid #aaaaaa;
+	border-width: 0 1px;
+}
+
+.footer_liner > .container {
+	border: solid #aaaaaa;
+	border-width: 0 1px 1px 1px;
+}
+
+header.container {
+	//  border: 1px solid #aaaaaa;
+	//  border-bottom: none;
+	margin-top: 20px;
+	background: #e9ecef;
+}
+
+// Hover/Focus state
+.cssmenu_horiz > li > a,
+.cssmenu_vert > li > a,
+.cssmenu_horiz ul > li > a,
+.cssmenu_vert ul > li > a {
+	&:hover,
+	&:focus {
+		text-decoration: none;
+//		color: $navbar-default-link-hover-color;
+//		background-color: $navbar-default-link-hover-bg;
+	}
+}
+
+.cssmenu_horiz li.selected a,
+.cssmenu_vert li.selected a {
+	text-decoration: none;
+//	color: $navbar-default-link-hover-color;
+//	background-color: //$navbar-default-link-active-bg  //Deprecated?;
+}
+
+//.middle {
+//	& > .row {
+//		margin-top: 5px;
+//		border-right: 6px solid #ffffff;
+//	}
+//}
+
+#col1 {
+	background: #f3f6f9;
+	//  margin: 8px 3px 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px solid #8cacbb;
+	margin-bottom: 10px;
+}
+
+#topbar_modules {
+	.navbar {
+		margin-bottom: 0;
+	}
+	.navbar {
+		border: none;
+	}
+	.box-search .form-group {
+		margin-bottom: 0;
+	}
+//	background: $navbar-default-bg;
+}
+
+#topbar_modules .navbar {
+	margin-bottom: 0;
+}
+
+footer .container {
+	background: #c7d0d9;
+	border: solid #8cacbb;
+	border-width: 0 1px 1px 1px;
+}
+
+#bottom_modules { padding-top: 15px; }
+
+body.fullscreen {
+	background: #f3f6f9;
+	#col1,
+	.middle_outer > .container,
+	.middle > .row,
+	body > .container,
+	.header_container > .container,
+	.header_container.container {
+		border: none;
+	}
+	#footer {
+		display: none;
+	}
+}
+
+h3.card-title {
+	font-size: 1.15rem;
+	margin-bottom: 0;
+}
+
+// So form submit buttons with icons and text used in popover actions can look just like links
+.popover button.btn-link.link-list,
+.popover button.btn-link.link-list .icon {
+	font-size: $popover-font-size;
+}

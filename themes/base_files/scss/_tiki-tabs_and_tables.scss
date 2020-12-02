@@ -1,0 +1,240 @@
+// $Id$
+// /***** Tabs ****/
+
+// /** Tables **/
+.ui-accordion .normal,
+.ui-accordion .normalnoborder,
+.ui-accordion .admin {
+	width: auto;
+}
+
+// /** Tables **/
+td.italiclabel {
+	text-align: right;
+	padding-right: 5px;
+	font-style: italic;
+}
+
+.normal td,
+.wikitable td,
+.odd,
+.even,
+.form,
+.editblogform td {
+	margin: 0;
+	padding: 3px;
+}
+
+.normal td,
+.wikitable td,
+td.odd,
+td.even {
+	padding: 0.2em;
+	border-collapse: collapse;
+}
+
+td.form {
+	padding: 0.2em;
+}
+
+td.integer {
+	text-align: right;
+}
+
+td.checkbox-cell {
+	text-align: center;
+	width: 20px;
+	position: relative;
+}
+
+td.action {
+	white-space: nowrap;
+}
+
+td.norecords {
+	text-align: left;
+	font-weight: bold;
+}
+
+td.id, td.icon {
+	text-align: center;
+}
+
+td.third,
+td.heading,
+tr.diffheader {
+	text-align: center;
+}
+
+td.numeric {
+	text-align: right;
+	padding-right: 1px;
+}
+
+/* Chrome & safari do not break urls or filenames at all. This causes
+	serious display issues within tables with long urls/filenames. */
+td.url{
+	word-break: break-all;
+}
+
+.normal.item th {
+	text-align: right;
+	padding: .2em .5em;
+}
+
+.normal.item td {
+	text-align: left;
+	padding: .2em .5em;
+}
+
+// /* odd and even classes for tr, td, and li */
+// .odd {
+//	 background: @table-bg;
+//	 color: @text-color;
+// }
+//
+// .even {
+//	 background: @table-accent-bg;
+//	 color: @text-color;
+// }
+#score-table tbody.event-section tr:first-child{
+	background: $gray-200;
+	color: $black;
+}
+#score-table .condition-row, .table .advanced-row {
+ padding: 1em;
+}
+#score-table .condition-row td {
+	border-bottom: none;
+}
+#score-table .advanced-row td {
+	border-top: none;
+}
+
+#score-table .chosen-container {
+	width: 50% !important;
+}
+
+@media (min-width: breakpoint-min(lg)) {
+	.table-responsive > #score-table {
+		table-layout: auto;
+	}
+}
+
+@media only screen and (max-width: breakpoint-max(sm)) {
+	.btn.table-expand-toggle,
+	.btn.tracker-resize-expand,
+	.btn.tracker-resize-compress { display: none; }
+	.toggle-table-wrap {
+		width: 100%; text-align: right;
+		.btn-link {
+			padding: 0; padding-left: 0.75rem;
+			font-weight: 600; font-size: 1.8em; text-decoration: none !important;
+		}
+	}
+
+	.tiki #col1 .table-responsive {
+		.form-check-input { position: static; margin-left: 0; }
+		.form-check .form-check-input { margin-left: -1.25rem; }
+		&.large-table {
+			.table:not(.tablesorter):not(.caltable) {
+				thead, tbody {
+					th:not(.visible-header) {
+						position: absolute;
+						top: -9999px;
+						left: -9999px;
+					}
+					th.visible-header {
+						display: inline-block;
+						border: none;
+					}
+				}
+				tbody th.visible-header {
+					padding-top: 0.35rem;
+					padding-bottom: 0.69rem;
+				}
+
+				thead tr {
+					display: block;
+					width: calc(100vw - 30px);
+					padding: 0;
+					background-color: transparent;
+					border-bottom: 1px solid $border-color;
+				}
+
+				tbody {
+					tr {
+						position: relative;
+						display: block;
+						padding: 0.5rem 0;
+						border-bottom: 1px solid $border-color;
+					}
+
+					td {
+						display: block;
+						padding: 0.25rem 0.75rem 0.5rem;
+						border-top: none;
+						text-align: left !important;
+						word-break: break-word;
+						&:after {
+							display: block;
+							clear: both;
+							content: "";
+						}
+						&.icon + td.checkbox-cell {
+							position: absolute;
+							top: 40px;
+							left: 2px;
+							margin-left: 0;
+						}
+						&.checkbox-cell { width: auto; }
+					}
+
+					> tr.active { display: none; }
+					td.checkall { position: absolute; }
+					td.checkmargin { margin-left: 30px; }
+					.header { display: block !important; font-weight: bold; }
+					.hidecell { display: none; }
+					.float-right { float: none !important; }
+					.form-check-input { margin: 5px 0 0; }
+					.form-check { padding-left: 0; }
+				}
+
+				tfoot tr { display: block; }
+			}
+
+			.table.caltable {
+				> tbody > tr:first-child {
+					> td:not(.visible-header) {
+						position: absolute;
+						top: -9999px;
+						left: -9999px;
+					}
+				}
+				.heading.weeks {
+					width: 50px;
+					~ td { margin-bottom: 15px; }
+				}
+				.header { display: block !important; font-weight: bold; }
+				.text-muted, .even, .odd { display: block; width: 100%; }
+				.even { background: transparent; }
+			}
+		}
+	}
+
+	.tiki #pagehistory .table-responsive {
+		&.large-table .table:not(.tablesorter) {
+			tbody th.compare-pages { float: right; }
+			tbody tr td:nth-last-child(-n+2) {
+				display: inline-block;
+				input[type=radio] { position: absolute; top: 15px; }
+			}
+			tbody tr td:nth-last-child(2) {
+				input[type=radio] { right: 65px; }
+			}
+			tbody tr td:nth-last-child(1) {
+				input[type=radio] { right: 20px; }
+			}
+		}
+	}
+}

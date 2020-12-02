@@ -1,0 +1,36 @@
+//  $Id$ ohia/scss/ohia.scss: compile to make
+/*  The Ohia theme style sheet for Tiki Wiki CMS Groupware. */
+
+@import "variables"; // Needs to come first, to override defaults.
+@import "../../../vendor_bundled/vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "../../base_files/scss/_tiki-variables.scss"; // Values/definitions for Tiki variables (outside of Bootstrap variables) such as _tiki-selectors.scss.
+@import "../../base_files/scss/_tiki-selectors.scss";
+@import "../../base_files/scss/_bs3-bs4-transition.scss";
+@import "_tiki-selectors.scss";
+@import "../../base_files/scss/_external-scripts.scss";
+
+
+.textarea-toolbar a.toolbar { color: #222; }
+
+// override for some cypht background colors
+.tiki {
+    .inline-cypht {
+        .folder_list, .content_cell, .compose_page, .message_list, .msg_text, .selected_part,
+        .server_content, .profile_content, .user_settings,
+        .nux_add_account, .imap_server_setup, .pop3_server_setup {
+            background-color: $card-bg;
+        }
+        .src_name, .content_title, .list_controls {
+            background: $card-header-bg;
+        }
+    }
+    &.mobile.tiki-cypht {
+        .folder_list {
+            background-color: $card-bg;
+            .src_name { background: $card-header-bg; }
+        }
+        .content_title {
+            &, .list_controls { background: $card-header-bg; }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+// $Id$
+//Less file for the jQuery tablesorter plugin
+//custom formatting for individual themes
+
+ // set background and text color
+ @if(type-of($body-bg) == color and $body-bg != transparent) {
+ 	$ts-bg		: $body-bg;
+ 	$ts-color	: $body-color;
+ } @else if(type-of($input-bg) == color and $input-bg != transparent) {
+ 	$ts-bg		: $input-color;
+ 	$ts-color	: $body-color;
+ } @else if(type-of($table-bg) == color and $table-bg != transparent) {
+ 	$ts-bg		: $table-head-color;
+ 	$ts-color	: $body-color;
+ } @else if(type-of($table-head-bg) == color and $table-head-bg != transparent) {
+ 	$ts-bg		: $table-head-color;
+ 	$ts-color	: $body-color;
+ } @else {
+ 	$ts-bg		: white;
+ 	$ts-color	: black;
+ }
+
+$ts-color: $body-color;
+
+// dark icons and colors for light background
+$unsortedDark		: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+$sortedDark			: darken($ts-bg, 3%);
+$sortAscDark		: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+$sortDescDark		: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+
+// light icons and colors for dark background
+$unsortedLight		: url(data:image/gif;base64,R0lGODlhFQAJAIAAAP///////yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+$sortedLight		: lighten($ts-bg, 5%);
+$sortAscLight		: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+$sortDescLight		: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+
+// function to choose the correct icon/text color based on background color lightness
+@function set-lightness($a, $b) {
+	@if (lightness($ts-bg) >= 50) {
+		@return $a;
+	} @else {
+		@return $b;
+	}
+}
+
+@mixin unsorted {
+	background-image: set-lightness($unsortedDark, $unsortedLight);
+}
+@mixin sortAsc {
+	background-image: set-lightness($sortAscDark, $sortAscLight);
+	background-color: set-lightness($sortedDark, $sortedLight);
+}
+@mixin sortDesc {
+	background-image: set-lightness($sortDescDark, $sortDescLight);
+	background-color: set-lightness($sortedDark, $sortedLight);
+}
+@mixin filter-input {
+	background-color: set-lightness($sortedDark, $sortedLight);
+}
+
+// style header
+table.tablesorter {
+	thead {
+		tr.tablesorter-headerRow {
+			background-color: $ts-bg;
+			th.tablesorter-headerUnSorted:not(.sorter-false) {
+				@include unsorted;
+			}
+			th.tablesorter-headerAsc {
+				@include sortAsc;
+			}
+			th.tablesorter-headerDesc {
+				@include sortDesc;
+			}
+		}
+		tr.tablesorter-filter-row {
+			background-color: $ts-bg;
+			td {
+				input.tablesorter-filter,
+				input.dateFrom,
+				input.dateTo {
+					@include filter-input;
+					color: $ts-color;
+				}
+			}
+		}
+	}
+}

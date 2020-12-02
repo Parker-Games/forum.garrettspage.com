@@ -1,0 +1,409 @@
+// $Id$
+// Override or add to specific default Bootstrap styles
+
+// Obey the non-fixed width!
+//body:not(.fixed_width) .page-header > div > div {
+//	width: auto !important;
+//}
+body:not(.fixed_width) .container {
+	padding-left: ($grid-gutter-width / 2);
+	padding-right: ($grid-gutter-width / 2);
+	width: auto;
+	max-width: 100%;
+}
+
+//.row-middle {
+//	word-wrap: break-word;
+//}
+
+@media(max-width:768px) {
+	.tiki .col-md-12 {
+	flex-basis: 100%;
+		width: 100% !important;
+	}
+	// Prevent column from imploding horizontally if it contains only narrow content.
+	.col2 .module,
+	.col3 .module {
+	flex-basis: 100%;
+	}
+}
+
+//legend + p,
+//legend + .form-group,
+//legend + input[type="hidden"] + .form-group,
+legend + * {
+	margin-top: 20px;
+}
+
+.page-header {
+	border-bottom: none;
+	margin: auto;
+	padding-bottom: 0;
+}
+
+.topbar .navbar {
+	margin-bottom: 0;
+	border: none;
+}
+
+// Make exception to dropdown list item behavior: log-in form background shouldn't change on mouseover.
+.dropdown-menu.dropdown-login li:hover {
+	background: inherit;
+}
+
+body.tiki.navbar-padding {
+	padding-top: $navbar-fixed-height;
+}
+
+body.layout_social.tiki.navbar-padding {
+	padding-top: $navbar-fixed-height + 2rem;
+	padding-bottom: 0;
+}
+
+body.fullscreen.tiki.navbar-padding {
+	padding-top: 0;
+}
+
+#col2,
+#col3 {
+	.card-header {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+// .panel-body ul.nav {
+//	overflow: visible;
+///}
+// .panel-body ul.nav.collapsing {
+//	overflow: hidden;
+//}
+
+// Todo: This was causing normal text-containing popovers to be extremely wide, so instances where extremely wide popovers are
+// desired like in tracker item tables need to be dealt with specifically.
+//.tiki .popover {
+//	max-width: inherit;
+//}
+
+//.tiki .popover {
+//	word-wrap: break-word;
+//	word-break: break-all;
+//}
+
+// .tiki .popover.tour-tour { max-width: 276px; } Not needed since default is now this width.
+
+// limit width of popups for file galleries
+.tiki.tiki-list_file_gallery .popover,
+.tiki.tiki_file_galleries .popover,
+.tiki.tiki_trackers .popover,
+.tiki .wikiplugin-trackerlist .popover {
+	max-width: 50vw;
+//	word-wrap: normal;
+//	word-break: normal;
+}
+
+.tiki.tiki_wiki_page .popover {
+	max-width: 50vw;
+}
+
+.tiki .popover {
+	p:last-child { margin-bottom: 0; }
+}
+
+.tiki .popover {
+	max-width: $popover-max-width + 25px;
+	.popover-body .table {
+		margin-bottom: 0;
+		td { word-break: break-word; }
+	}
+}
+
+
+.tiki .media-overflow-visible,
+.tiki .media-overflow-visible .media-body {
+	overflow: visible;
+}
+
+.tiki #col1 .table-responsive {
+	width: 100%;
+	margin-bottom: 15px;
+	overflow-y: hidden;
+	overflow-x: auto;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	-webkit-overflow-scrolling: touch;
+}
+
+.tiki .table-responsive > .table {
+	margin-bottom: 0;
+	// Ensure the content doesn't wrap
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				white-space: normal;
+			}
+		}
+	}
+}
+
+// columns with action icons in shouldn't wrap
+.tiki .table-responsive > .table td.action {
+	white-space: nowrap;
+}
+
+
+.layout_social,
+.layout_social_modules {
+	a.navbar-brand img {
+		display: inline;
+	}
+	h1.sitetitle {
+		font-size: 1.8rem;
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+	h2.sitesubtitle {
+		font-size: 1.2rem
+	}
+	h1.sitetitle,
+	h2.sitesubtitle {
+		display: inline-block
+	}
+	.sitetitle,
+	.sitesubtitle {
+		margin-right: 1rem
+	}
+
+	#topbar_modules {
+		display: inline-block;
+	}
+}
+
+.layout_social_modules {
+	#topbar_modules {
+		display: block;
+	}
+}
+
+.header_outer.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-fixed-top,
+#navbar-collapse-social {
+	.navbar {
+		margin-bottom: 0;
+		min-height: 32px;
+	}
+}
+
+.navbar-nav {
+	-ms-flex-negative: 0;
+}
+
+#topbar_modules_social { float: left; }
+
+// Commented this out for BS4 because it conflicts with img-fluid.
+// https://github.com/twbs/bootstrap/issues/16120
+// .img-thumbnail {
+//	&.media-object {
+//		max-width: none;
+//	}
+//}
+
+// Needed to align checkbox with label, which has a top margin (admin forms with labels on left of input)
+.tiki .form-horizontal .form-group label + div > input[type="checkbox"] { margin-top: .8em; }
+.tiki .form-horizontal .checkbox input[type="checkbox"] {margin-top: .4em;}
+
+
+.control-label.text-left {
+	text-align: left;
+}
+
+.form-horizontal .control-label.text-left {
+	text-align: left;
+}
+
+.affix-top {position: static; }
+.affix { position: fixed; top: 10px; max-height: calc(100vh - 20px); overflow-y: auto !important; }
+.affix-bottom { position: absolute; left: 0!important; }
+
+// default width "auto" causes the input to overflow outside of narrow divs.
+.col-sm-2 .form-inline .form-control,
+.col-md-2 .form-inline .form-control { width: 100%; }
+
+// Remove negative side margins on div.row in forms, etc. to keep left and right whitespace
+.form-group.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+///// User layout columns (module zones) switching / toggling (resurrected feature)
+.side-col-toggle-container {width: 100%; height: 1.5rem; margin-top: -.8rem; display:flex;}
+@media (max-width: breakpoint-max(sm)) {
+	.side-col-toggle-container { display: none; }
+}
+
+@media (min-width: 992px) {
+	.hide_zone_left #col2, // When hidden we simply do not display the columns
+	.hide_zone_right #col3 {
+		display: none;
+	}
+//	.col1 .table-responsive > table { // Keep table width inside main column width (no scrolling) in large displays in Chrome/chromium browsers.
+//		table-layout: fixed;
+//	}
+
+// Overrides in case of 3-col layout
+.hide_zone_left #col1.col-lg-8 { // when left col is hidden
+	width: 83.3334%; // TODO: make it computed scss variable?
+	flex: 0 0 83.3334%;
+	max-width: 83.3334%;
+}
+.hide_zone_right #col1.col-lg-8 { // when right col is hidden
+	width: 83.3334%; // TODO: make it computed scss variable?
+	flex: 0 0 83.3334%;
+	max-width: 83.3334%;
+}
+
+// Overrides in case of 2-col layout with no right column or no left column, respectively
+.hide_zone_left #col1.col-lg-9,
+.hide_zone_right #col1.col-lg-9{
+	width: 100%;
+}
+
+// Overrides in case of 2-col layout with no right column
+.hide_zone_left #col1.col-lg-9 {
+	width: 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+// Overrides in case of 2-col layout with no left column
+.hide_zone_right #col1.col-lg-9 {
+	width: 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+// Left col toggled on, right col assigned off
+.hide_zone_right #col1.col-lg-9.order-lg-2 {
+	width: 75%;
+	flex: 0 0 75%;
+	max-width: 75%;
+}
+
+// Left col assigned off, right col toggled off
+.hide_zone_right #col1.col-lg-9:not(.order-lg-2) {
+	width: 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+// Right col assigned off, left col toggled off
+.hide_zone_right.hide_zone_left .side-col-toggle + #col1.col-lg-9.order-lg-2,
+.hide_zone_left .side-col-toggle + #col1.col-lg-9.order-lg-2{
+	width: 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.hide_zone_left.hide_zone_right #col1.col-lg-8,
+.hide_zone_left.hide_zone_right #col1.col-lg-9 { // when both are hidden, in 3-col and 2-col cases
+	width: 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+	// modules admin needs to be able to see the modules
+	.tiki-admin_modules.hide_zone_left #col2 {
+		display: block;
+		opacity: 0.6;
+	}
+
+	.tiki-admin_modules.hide_zone_right #col3 {
+		display: block;
+		opacity: 0.6;
+	}
+
+	.tiki-admin_modules.hide_zone_left #col1.col-lg-8,
+	.tiki-admin_modules.hide_zone_right #col1.col-lg-8 {
+		width: 66.6666666667%;
+		flex: 0 0 66.6666666667%;
+		max-width: 66.6666666667%;
+	}
+
+	.tiki-admin_modules.hide_zone_left #col1.col-lg-9,
+	.tiki-admin_modules.hide_zone_right #col1.col-lg-9 {
+		width: 75%;
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+
+}
+// End overrides for wide side column layout
+
+
+@media (max-width: breakpoint-max(sm)) {
+	#col1 {
+		width: 100%;
+		flex-basis: 100%;
+	}
+	.hide_zone_left #col2,
+	.hide_zone_right #col3 {
+		display: block;
+	}
+	.hide_zone_right #col2 {
+		right: auto;
+	}
+	.toggle_zone {
+		display: none;
+	}
+}
+
+///// END of User layout columns
+
+// Prevent scrollbar from overlapping fullscreen button in IE
+// $-ms-viewport {	width: auto !important; } Todo - causes compile error
+
+.tooltip-inner ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tiki #conversejs, .tiki #conversejs.converse-embedded {
+	& ~ .modal-backdrop {
+		display: none;
+	}
+}
+
+.bg-danger h4.card-title {
+	margin-bottom: 0;
+	color: color-yiq(theme-color("danger"));
+}
+.bg-warning h5.card-title {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+	.tiki #conversejs.converse-embedded {
+		margin: 0;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+	}
+}
+
+@media (max-width: breakpoint-max(sm)) {
+	.btn { white-space: normal !important; }
+	.alert .rboxcontent { word-break: break-word; }
+	.tiki.tiki_wiki_page .popover { max-width: 75%; }
+}
+
+// Override the default Bootstrap separator.
+.breadcrumb-item + .breadcrumb-item::before { content: none !important; }

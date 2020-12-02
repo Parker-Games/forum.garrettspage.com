@@ -1,0 +1,20 @@
+{
+	"name": "tiki/tiki-custom",
+	"description": "Tiki Wiki CMS Groupware",
+	"license": "LGPL-2.1",
+	"homepage": "https://tiki.org",
+	"minimum-stability": "stable",
+	"require": {
+	},
+	"config": {
+		"process-timeout": 5000,
+		"bin-dir": "bin",
+		"component-dir": "vendor/components"
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://composer.tiki.org"
+		}
+	]
+}

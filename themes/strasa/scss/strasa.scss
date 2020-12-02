@@ -1,0 +1,54 @@
+//  $Id$ - Compile to produce
+/* strasa.css, the Strasa theme for Tiki Wiki CMS Groupware */
+@import url("//fonts.googleapis.com/css?family=Simonetta");
+@import "variables"; // Needs to come first, to override defaults.
+@import "../../../vendor_bundled/vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "../../base_files/scss/_tiki-variables.scss"; // Values/definitions for Tiki variables (outside of Bootstrap variables) such as _tiki-selectors.scss.
+@import "../../base_files/scss/_tiki-selectors.scss";
+@import "../../base_files/scss/_bs3-bs4-transition.scss";
+@import "_tiki-selectors.scss";
+@import "../../base_files/scss/_external-scripts.scss";
+
+
+// override for converseJS chatbox background colors
+.tiki #conversejs, .tiki #conversejs.converse-embedded {
+	#controlbox {
+		.box-flyout { background-color: #fff; }
+    }
+
+	.chatbox {
+		.box-flyout {
+			background-color: #fff;
+        }
+    }
+}
+
+// override for some cypht background colors
+body.tiki.tiki-webmail {
+	background: #214d68 url('#{$imagePath}body-bg_fw.png') repeat-x;
+}
+
+// override for jQuery-UI colors
+.tiki .ui-widget-header {
+	color: #fff;
+}
+
+.tiki .ui-state-default,
+.tiki .ui-widget-content .ui-state-default,
+.tiki .ui-widget-header .ui-state-default,
+.tiki .ui-button,
+.tiki html .ui-button.ui-state-disabled:hover,
+.tiki html .ui-button.ui-state-disabled:active {
+	color: #069;
+	background: #dee2e6
+}
+
+.tiki .ui-state-active,
+.tiki .ui-widget-content .ui-state-active,
+.tiki .ui-widget-header .ui-state-active,
+.tiki a.ui-button:active,
+.tiki .ui-button:active,
+.tiki .ui-button.ui-state-active:hover {
+	color: #069;
+	background: #fff;
+}

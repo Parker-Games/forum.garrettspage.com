@@ -1,0 +1,291 @@
+// $Id$ Darkroom theme custom-other.less file.
+
+$imagePath: "../images/";
+//body {
+//	background-image: url('#{$imagePath}bg.jpg');
+//}
+$topmodules-row-margin-bottom: 15px;
+
+body,
+body.fullscreen {
+	background-image: url('#{$imagePath}474747_5e5e5e_40.png');
+}
+
+#middle { padding-top: 10px; }
+
+.btn-success,
+.btn-danger,
+.btn-success.disabled, .btn-success:disabled,
+.btn-danger.disabled, .btn-danger:disabled {
+  color: #f8f9fa;
+}
+
+.container:not(.in-navbar) {
+	background: #0c0c0c;
+}
+
+body.layout_social > .container {
+	padding-top: 1.2rem;
+}
+
+#col1 {
+	background: #3F3F3F;
+	border-left: 10px solid #0c0c0c;
+	border-right: 10px solid #0c0c0c;
+	padding-bottom: 10px;
+}
+
+// /* Background for CkEditor */
+.cke_contents > .cke_wysiwyg_frame, .cke_contents > .cke_wysiwyg_div {
+	background: #3F3F3F !important;
+	color: $body-color !important;
+}
+
+h3.card-title {
+	color: #9d9d9d;
+	font-size: 24px;
+}
+
+.card-body {
+	border: solid #292929;
+	border-width: 0 8px .5rem 8px;
+}
+//.card.postbody,
+//.card.postbody .card-header,
+//.card.postbody .card-footer {
+//  background-color: transparent;
+//  border: none;
+//}
+
+.module.card { border: none; }
+
+.card-header,
+.card.postbody .card-header{ background: #292929; } // Was .card-primary - still ok?
+
+.navbar-fixed-top .container,
+//.bg-light,
+.topbar,
+.btn,
+.nav-tabs > li > a,
+.input-group-addon,
+
+// jQuery-UI overrides
+.tiki .ui-state-default,
+.tiki .ui-widget-content .ui-state-default,
+.tiki .ui-widget-header .ui-state-default,
+.tiki .ui-button,
+.tiki html .ui-button.ui-state-disabled:hover,
+.tiki html .ui-button.ui-state-disabled:active,
+
+.tiki .ui-state-active,
+.tiki .ui-widget-content .ui-state-active,
+.tiki .ui-widget-header .ui-state-active,
+.tiki a.ui-button:active,
+.tiki .ui-button:active,
+.tiki .ui-button.ui-state-active:hover {
+	background: #818181; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #818181), color-stop(100%, #393939)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #818181 0%, #393939 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #818181 0%, #393939 100%); /* Opera 11.10+ */
+	background: linear-gradient(to bottom, #818181 0%, #393939 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#818181', endColorstr='#393939', GradientType=0);
+	border-color: transparent !important;
+}
+
+.bg-dark,
+.bg-light {
+	background: #818181 !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #818181), color-stop(100%, #393939)) !important;
+	background: -webkit-linear-gradient(top, #818181 0%, #393939 100%) !important;
+	background: -o-linear-gradient(top, #818181 0%, #393939 100%) !important;
+	background: linear-gradient(to bottom, #818181 0%, #393939 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#818181', endColorstr='#393939', GradientType=0);
+	border-color: transparent !important;
+}
+
+.tiki .nav-link.active { border-color: #dee2e6  !important; }
+
+.nav-tabs > li.active.show > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+
+	//jQuery-UI overrides
+.tiki .ui-state-active,
+.tiki .ui-widget-content .ui-state-active,
+.tiki .ui-widget-header .ui-state-active,
+.tiki a.ui-button:active,
+.tiki .ui-button:active,
+.tiki .ui-button.ui-state-active:hover{
+	color: #ffffff;
+	border-color: #dee2e6 !important;
+}
+
+.tiki .ui-state-default:not(.ui-state-active) a:hover,
+//.tiki .ui-state-default a:link:hover,
+//.tiki .ui-state-default a:visited:hover,
+.tiki a.ui-button:hover,
+.tiki a:link.ui-button:hover,
+.tiki a:visited.ui-button:hover,
+.tiki .ui-button:hover { color: #858585; }
+
+.tiki .ui-widget.ui-widget-content { border: none; }
+
+.tiki .elfinder-touch .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-button { background: #f2f2f2; }
+.tiki .elfinder-cwd-file.directory.ui-selected {background: #f2f2f2; }
+
+.tiki .ui-state-hover,
+.tiki .ui-widget-content .ui-state-hover,
+.tiki .ui-widget-header .ui-state-hover,
+.tiki .ui-state-focus,
+.tiki .ui-widget-content .ui-state-focus,
+.tiki .ui-widget-header .ui-state-focus,
+.tiki .ui-button:hover,
+.tiki .ui-button:focus {
+	border: 1px solid #cccccc;
+	background: #818181; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #818181), color-stop(100%, #393939)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #818181 0%, #393939 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #818181 0%, #393939 100%); /* Opera 11.10+ */
+	background: linear-gradient(to bottom, #818181 0%, #393939 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#818181', endColorstr='#393939', GradientType=0);
+	font-weight: normal;
+	color: #f2f2f2;
+}
+
+.top_modules {
+	.navbar-dark,
+	.navbar-light {
+		background: transparent !important;
+		border: none;
+	}
+}
+
+.btn.btn-link {background: none !important;}
+
+.topbar {
+	margin-bottom: 1.3rem;
+}
+
+#topbar_modules,
+#top_modules {
+	.bg-dark,
+	.bg-light {
+		background: transparent !important;
+		border: none;
+		margin-bottom: 0;
+	}
+}
+
+#topbar_modules .form-group {
+	margin-bottom: 0
+}
+
+.textarea-toolbar a.toolbar {
+	background: none !important;
+}
+
+.nav > li > a {
+	padding: .4rem 10px;
+}
+
+select {
+	background: #292929
+}
+
+.cke_wysiwyg_frame, .cke_wysiwyg_div {
+	background: #292929 !important;
+	color: #ffffff !important;
+}
+
+.even {
+	background: $table-bg-accent;
+}
+
+.odd,
+#trig_dptxt {
+	background: $table-bg;
+	color: $primary;
+}
+
+input[type="checkbox"] {
+	color: #ffffff !important;
+	background: $table-bg;
+}
+
+input.reportBuilderInput,
+.ui-datepicker {
+	background: #292929;
+}
+
+textarea,
+input {
+	background: $input-bg;
+	color: $input-color;
+}
+
+.jtrack-form {
+	background: #292929 !important;
+}
+
+.box-quickadmin .cssmenu_horiz ul li {
+	background-color: $body-bg;
+}
+
+a.toolbar,
+.cssmenu_horiz a,
+.cssmenu_vert a {
+	color: $link-color;
+}
+
+.cssmenu_horiz li ul,
+.cssmenu_vert li ul {
+	padding: 0;
+	margin: 2px 0 0; // override default ul
+	//  font-size: $font-size-base;
+	background-color: $dropdown-bg;
+	border: 1px solid $dropdown-border-color;
+	border-radius: $border-radius;
+	@include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+
+	// Links within the dropdown menu
+	> li > a {
+		padding: 3px 20px;
+		font-weight: normal;
+		line-height: $line-height-base;
+		color: $dropdown-link-color;
+		background: $dropdown-bg;
+	}
+}
+
+// Hover/Focus state
+.cssmenu_horiz li a,
+.cssmenu_vert li a,
+.cssmenu_horiz ul li a,
+.cssmenu_vert ul li a {
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $dropdown-link-hover-color;
+		background-color: $dropdown-link-hover-bg;
+	}
+}
+
+.chosen-container-single .chosen-single div {
+	padding-left: 1rem;
+}
+// Copied from example at https://www.jqueryscript.net/demo/Bootstrap-4-Chosen-Plugin/
+.chosen-container-single .chosen-single div::after {
+	display: inline-block;
+	position: relative;
+	top: .25rem;
+	left: -1rem;
+	width: 2rem;
+	height: 2rem;
+	content: "";
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23adb5bd' d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3C/svg%3E");
+	background-size: 2rem 2rem;
+	background-position: center center;
+	background-repeat: no-repeat;
+}

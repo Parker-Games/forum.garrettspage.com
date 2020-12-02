@@ -1,0 +1,57 @@
+// $Id$
+/* Adapted by the Tiki Community for Tiki Wiki CMS Groupware.
+ Original Bootswatch information:
+ */
+
+@import "variables"; // Needs to come first, to override defaults.
+@import "../../../vendor_bundled/vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "../../base_files/scss/_tiki-variables.scss"; // Values/definitions for Tiki variables (outside of Bootstrap variables) such as _tiki-selectors.scss.
+@import "_bootswatch.scss";
+@import "../../base_files/scss/_tiki-selectors.scss";
+@import "../../base_files/scss/_bs3-bs4-transition.scss";
+@import "../../base_files/scss/_external-scripts.scss";
+
+// the Bootstrap variables.scss file with theme-specific values replacing the defaults
+
+//.cssmenu_horiz a,
+//.cssmenu_horiz ul li button.btn-link.link-list,
+//.cssmenu_vert ul li button.btn-link.link-list {
+//	font-size: 12px;
+//}
+
+//.nav.cssmenu_horiz > li > a {
+//	padding-top: 11px;
+//	padding-bottom: 11px;
+//}
+
+.navbar-light .cssmenu_horiz > li > a {
+	color: $navbar-light-color;
+}
+
+body.fullscreen { background: $body-bg; }
+
+//Theme variables aren't overriding default values for these.
+body {
+	color: #EBEBEB;
+	background: #2B3E50;
+}
+
+// override for some cypht background colors
+.tiki {
+    .inline-cypht {
+        .list_controls {
+            background: transparent;
+        }
+	}
+    &.mobile.tiki-cypht {
+        .content_title {
+            &, .list_controls { background: $card-bg; }
+        }
+    }
+}
+
+.tiki_trackers {
+	.icon-status-open, .icon-status-pending, .icon-status-closed {
+		filter: drop-shadow(0px 0px 1px black);
+	}
+}

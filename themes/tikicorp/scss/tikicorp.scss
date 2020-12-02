@@ -1,0 +1,20 @@
+
+@import "fonts";
+@import "variables"; // Needs to come first, to override defaults.
+@import "../../../vendor_bundled/vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "../../base_files/scss/_tiki-variables.scss"; // Values/definitions for Tiki variables (outside of Bootstrap variables) such as _tiki-selectors.scss.
+@import "../../base_files/scss/_tiki-selectors.scss";
+@import "../../base_files/scss/_bs3-bs4-transition.scss";
+@import "_tiki-selectors.scss";
+@import "../../base_files/scss/_external-scripts.scss";
+
+
+// override for some cypht background colors
+body.tiki.tiki-webmail {
+    background-image: url('#{$imagePath}bg-body.jpg');
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .card h3 { color: $popover-header-color; }
+}

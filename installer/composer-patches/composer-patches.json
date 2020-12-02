@@ -1,0 +1,30 @@
+{
+  "patches": {
+    "adodb/adodb-php": {
+      "Remove references to ADOdb Extension": "../installer/composer-patches/adodb-php__remove_references_to_adodb_extension.patch",
+      "Remove the check for ADOdb Extension": "../installer/composer-patches/adodb-php__remove-the-check-if-the-adodb-php_ext-is-enabled.patch"
+    },
+    "jquery/jquery-sheet": {
+      "Fix visibility issues": "../installer/composer-patches/jquery-sheet_fix-visibility-issues.patch"
+    },
+    "jquery-plugins/jquery-validation": {
+      "Fix remote validation unhighlights": "../installer/composer-patches/jquery-validator_fix-remote-validation-unhighlights.patch"
+    },
+    "pear/text_wiki": {
+      "Recursive call to constructor": "../installer/composer-patches/text_wiki__recursive_call_to_constructor.json"
+    },
+    "pear/text_wiki_mediawiki": {
+      "Removed deprecated syntax in PHP7": "../installer/composer-patches/text_wiki_mediawiki__php7fixes.patch",
+      "Renamed method to avoid collision with func from parent class": "../installer/composer-patches/text_wiki_mediawiki__func_collision.patch"
+    },
+    "pear/xml_rpc": {
+      "Add support for PHP7": "../installer/composer-patches/pear_xml_rpc-php7-patch-RELEASE_1_5_5.patch"
+    },
+	"phpunit/phpunit": {
+		"Remove Match Interface for PHP8": "../installer/composer-patches/phpunit-phpunit_remove_match_interface_usage.patch"
+	},
+    "npm-asset/converse.js": {
+      "Remove native javascript for bootstrap": "../installer/composer-patches/jcbrand-conversejs_remove-native-javascript-for-bootstrap.patch"
+    }
+  }
+}

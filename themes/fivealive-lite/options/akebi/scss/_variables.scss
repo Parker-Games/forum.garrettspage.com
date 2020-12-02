@@ -1,0 +1,115 @@
+// $Id$ Custom variables for the Akebi theme option of the FiveAlive and FiveAlive-lite themes
+// These FiveAlive-lite Akebi theme option variables are applied to fivealive-lite/scss/fivealive-lite_option_selectors.scss.
+
+// - - - - - - - Bootstrap variables (override values in vendor_bundled/vendor/twbs/bootstrap/scss/_variables.scss - - - - - - //
+$white:    #fff;
+$black:    #000;
+$light: #18a3bb;
+
+$bg-light: #18a3bb !important;
+$body-bg: #fff;
+
+$link-color: #0b8a98;
+$link-hover-color: #18a3bb;
+
+$navbar-dark-color:                 rgba($white, .75);
+$navbar-dark-hover-color:           rgba($white, .85);
+$navbar-dark-active-color:          $white;
+$navbar-dark-disabled-color:        rgba($white, .25);
+$navbar-light-color:                rgba($black, .5);
+$navbar-light-hover-color:          rgba($black, .7);
+$navbar-light-active-color:         rgba($black, .9);
+$navbar-light-disabled-color:       rgba($black, .3);
+
+// navbar link hover colors
+$bg-dark-link-hover-color: #f2f2f2;
+$bg-dark-link-hover-bg: #003c4a;
+
+$hr-border-color: #18a3bb;
+
+$top-bg: #117485;
+$top-color: #fff;
+$top-link-color: #fff;
+$top-link-hover-color: #f9f9f9;
+$topbar-bg: #063035;
+$bg-dark: #18a3bb;
+$bg-light: #18a3bb;
+$card-border-color: #169FB6;
+$table-border-color: #1296a9;
+$table-accent-bg: #f9f9f9;
+$table-hover-bg: #f5f5f5;
+
+$input-color: #3d3d3d;
+$input-bg: #ddf8f9;
+$input-border-color: #b4f3fb;
+$input-border-top-color: #83c5ce;
+$input-border-right-color: #fff;
+$input-border-bottom-color: #fff;
+$input-border-left-color: #83c5ce;
+
+$dropdown-bg: #087f93;
+$dropdown-border-color: rgba(0, 0, 0, 0.15);
+
+$dropdown-link-color: #ffffff;
+$dropdown-link-hover-color: #f2f2f2;
+$dropdown-link-hover-bg: #087084;
+$dropdown-link-active-color: red;
+$dropdown-link-active-bg: #087084;
+$dropdown-link-disabled-color: #f2f2f2;
+$dropdown-header-color: #ffffff;
+$dropdown-divider-bg: $dropdown-bg;
+
+$nav-tabs-link-color: #000;
+$nav-tabs-link-bg: $input-bg;
+$nav-tabs-link-active-color: #fff;
+$nav-tabs-link-active-bg: $dropdown-link-hover-bg;
+
+
+$nav-pills-link-active-bg: #0b8a98;
+$pagination-color: #0b8a98;
+$pagination-bg: #ffffff;
+$pagination-border-color: #dddddd;
+$pagination-hover-color: #18a3bb;
+$pagination-hover-bg: #eeeeee;
+$pagination-hover-border-color: #dddddd;
+$pagination-active-bg: #0b8a98;
+$pagination-active-border-color: #0b8a98;
+$pagination-disabled-color: #999999;
+$pagination-disabled-bg: #ffffff;
+$pagination-disabled-border-color: #dddddd;
+
+
+// - - - - - - - - - -  - - - - - - Other variables, if any - - - - - - - - - - - - - - - - - //
+$bg-light-alt: #117485 !important;
+
+$side-column-heading-color: #169FB6;
+
+$middle_outer-inset-shadow-bg: #063035;
+$footer_liner-card-inner-border: #19a5be;
+
+$footer-accent-color: #19a5be;
+$footer-btn-secondary-color: #f4f4f4;
+$footer_liner-border-color: $footer-accent-color;
+
+$autotoc-nav-bg: #005064;
+$autotoc-color: #ffffff;
+$autotoc-nav-link-hover-color: #f2f2f2;
+$autotoc-nav-link-hover-bg: #2e1f39;
+
+// - - - - - - - - - -  - - - - - - Other CSS, if any - - - - - - - - - - - - - - - - - //
+
+$chosen-container-multi-choices-bg: $input-bg;
+$chosen-container-multi-choices-color: $input-color;
+$chosen-container-multi-choices-border: #b4f3fb;
+$chosen-container-single-bg: #f8f9d4;
+$chosen-container-single-color: #555555;
+$chosen-container-single-border: $input-border-color;
+$chosen-container-single-input-bg: #f8f9d4;
+$chosen-container-single-input-border: #b4f3fb;
+$chosen-container-chosen-results-li-highlighted-bg: #003c4a;
+$chosen-container-chosen-results-li-highlighted-color: #f2f2f2;
+$autotoc-nav-bg: #ffffff;
+$autotoc-nav-border: #19a5be;
+$autotoc-color: #0b8a98;
+$autotoc-nav-li-link-hover-color: #f2f2f2;
+$autotoc-nav-li-link-hover-bg: #003c4a;

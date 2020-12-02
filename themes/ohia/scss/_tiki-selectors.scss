@@ -1,0 +1,142 @@
+// $Id$  
+$imagePath: "../images/";
+// body {
+// 	background-image: url('#{$imagePath}bg.jpg');
+// }
+
+.topbar {
+	margin-bottom: 20px;
+}
+
+button, input, optgroup, select, textarea {
+	background: #242424;
+	color: #cfcfcf;
+}
+
+.bg-dark,
+.topbar_modules.navbar-dark.bg-dark { background: #343a40 !important; }
+
+.bg-light,
+.topbar_modules.navbar-dark.bg-dark { background: #7a0101 !important; }
+
+
+
+//.top_modules { background: #030511; }
+
+// prevent unwanted background-on-background or on middle box-shadow
+//.layout_classic #topbar_modules {
+//  .navbar.bg-dark,
+//  .navbar.bg-light { background: transparent !important; }
+//}
+
+//.layout_classic {
+//  #top_modules.bg-dark,
+//  #top_modules.bg-light,
+//  #topbar_modules,
+//  #topbar.bg-dark,
+//  #topbar.bg-light{ background: transparent !important; }
+//}
+
+.navbar-light.navbar-fixed-top > .container {
+	border: none;
+	margin-bottom: 0;
+}
+
+.header-container .container,
+.navbar-light.navbar-fixed-top {
+
+	a,
+	a:visited,
+	.btn-link {
+		color: #f4f4f4;
+	}
+}
+
+.box-quickadmin .cssmenu_horiz ul li {
+	background-color: #4c4c4c;
+}
+
+.middle_outer > .container {
+	border-top: none;
+}
+
+#topbar_modules .box-search {
+	margin-top: 8px;
+}
+
+.card-title,
+.card-header {
+	font-weight: bold;
+}
+
+.card-header {
+	background: $card-header-bg;
+	border: 1px solid $card-inner-border;
+}
+
+$nav-tabs-active-link-hover-color: #ffffff;
+
+.nav-tabs > li > a {
+	border: solid $gray-500;
+	border-width: 1px 1px 0 1px;
+}
+
+footer.footer .modules {
+	background: #030511;
+  padding-top: 1rem;
+  	color: #f4f4f4;
+	font-size: 0.9em;
+	a, a:visited {
+		color: #f4f4f4;
+	}
+}
+
+.popover {
+	background-color: lighten(#030511, 10%);
+}
+
+.popover-header {
+	background-color: #696969;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.cssmenu_horiz li ul,
+.cssmenu_vert li ul {
+	padding: 5px 0;
+	margin: 2px 0 0; // override default ul
+	//  font-size: $font-size-base;
+	background-color: $dropdown-bg;
+	border: 1px solid $dropdown-border-color;
+	border-radius: $border-radius;
+	@include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+
+	// Links within the dropdown menu
+	> li > a {
+		padding: 3px 20px;
+		font-weight: normal;
+		line-height: $line-height-base;
+		color: $dropdown-link-color;
+	}
+}
+
+// Hover/Focus state
+.cssmenu_horiz > li > a,
+.cssmenu_vert > li > a,
+.cssmenu_horiz ul > li > a,
+.cssmenu_vert ul > li > a {
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $dropdown-link-hover-color;
+		background-color: $dropdown-link-hover-bg;
+	}
+}
+
+body.fullscreen {
+	background: $body-bg;
+	.container {
+		border: none;
+	}
+}

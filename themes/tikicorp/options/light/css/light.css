@@ -1,0 +1,28 @@
+/*  The Akebi theme option file for the FiveAlive theme of Tiki Wiki CMS Groupware. */
+/*
+.btn-secondary {
+  color: #fff;
+  background-color: $btn-secondary-bg;
+  border-color: $btn-secondary-border;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: $btn-secondary-hover-bg;
+  border-color: $btn-secondary-hover-border;
+}
+
+.btn-secondary.disabled, .btn-secondary:disabled {
+  color: #fff;
+  background-color: $btn-secondary-disabled-bg;
+  border-color: $btn-secondary-disabled-border;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: $btn-secondary-active-bg;
+  border-color: $btn-secondary-active-border;
+}*/
+.blog-postbody-title h2.panel-title {
+  font-size: 20px; }

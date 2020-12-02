@@ -1,0 +1,35 @@
+// $Id$
+// Articles
+.article {
+	.actions form {
+		display: inline; // To keep language form and actions icons on one line
+	}
+}
+
+.articletrailer {
+	span {
+		display: inline-block;
+		margin: auto;
+		white-space: nowrap;
+	}
+	.wikitopline {
+		float: left;
+	}
+}
+
+.article-image {
+	margin-right: 1rem; // to not have the article images "glued" to the article body text
+	max-width: 100%;
+}
+
+[dir="rtl"] .article-image {
+	margin-right: 0; // for right to left languages reset this
+	margin-left: 1rem;
+}
+
+.articleheading {
+	.thumbnail {
+		margin-right: 1rem;
+		display: block;
+	}
+}

@@ -1,0 +1,42 @@
+//
+// Variables defined by functions, etc. or by Bootstrap defaults.
+$link-color: lighten(theme-color("warning"), 15%);
+$gray-500: lighten(#000000, 33.5%); //
+$link-hover-color: $link-color; // This has to be here because #link-color is defined by bs default, not be amelia.
+$body-bg: #108a93; // These work here, but not in amelia/scss/variables, for some reason.
+$body-color: #ffffff; // "
+body.fullscreen { background: $body-bg; } // Moved here because it needs $body-bg
+
+// Amelia 3.1.1
+
+// Forms ======================================================================
+
+legend {
+	font-family: 'Lobster', cursive;
+	color: #ffffff;
+}
+
+.card,
+.autotoc > .nav {
+  background-color: #13a0aa !important;
+  border-color: #0d747c !important;
+}
+
+.card-header,
+.modal-header{
+  color: #ffffff;
+  background-color: #18cbd8 !important;
+  border-color: #0d747c !important;
+}
+
+.card-title a,
+.card-title small,
+.card-title .small,
+.card-title small a,
+.card-title .small a {
+  color: inherit;
+}
+
+.navbar-light .cssmenu_horiz > li > a {
+  color: $navbar-light-color;
+}

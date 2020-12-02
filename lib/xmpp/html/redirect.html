@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>OAuth Redirection page</title>
+
+		<script type="text/javascript">
+			var token = window.location.search
+				.substring(1)
+				.split('&amp;')
+				.map(function(piece){
+					var i = piece.indexOf('=');
+					return [
+						piece.substring(0, i),
+						piece.substring(i + 1)
+					]
+				})
+				.filter(function(s){
+					return s && s.length && s.length === 2;
+				})
+				.reduce(function(h, s){
+					h[ s[0] ] = s[1];
+					return h;
+				}, {});
+
+			var win = window.opener || window.parent;
+			win.postMessage(token);
+
+			setTimeout(function(){
+				window.close();
+			}, 200);
+		</script>
+	</head>
+	<body></body>
+</html>

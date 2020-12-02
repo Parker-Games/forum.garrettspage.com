@@ -1,0 +1,178 @@
+// $Id$
+
+
+
+// /***** Trackers (etc.) *****/
+.statuson,
+.statusoff {
+	padding: 3px 2px 0 2px;
+	vertical-align: middle;
+	height: 15px;
+}
+
+.multiselect .selection {
+	display: none;
+	overflow: auto;
+	position: relative;
+	height: auto;
+	z-index: 1000;
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.tracker-item-files li {
+	position: relative;
+	clear: right;
+	padding-right: 1.5em;
+	font-size: 0.9em;
+	img, span { margin-right: 6px; }
+}
+
+.tracker-item-files a.file-delete-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+//	display: inline-block;
+//	clear: right;
+//	float: right;
+}
+
+.tracker-item-files {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-moz-column-gap: 30px;
+	-webkit-column-gap: 30px;
+	column-gap: 30px;
+	padding-left: 20px;
+}
+
+.file-drop {
+	min-height: 100px;
+}
+
+.tracker-form-text {
+	margin-top: -15px;
+}
+
+.card-accordian {
+	> .card-header {
+		padding: 0;
+		h4.card-title {
+			padding: 0;
+			margin: 0;
+			a {
+				display: block;
+				padding: $card-spacer-y $card-spacer-x;
+			}
+		}
+	}
+}
+
+.tracker-field-h {
+	font-weight: bold;
+}
+
+
+[class*="tracker-status"] {
+	&:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		display: inline-block;
+		font-family: "Font Awesome 5 Free";
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		line-height: 1;
+	}
+	&.highlighted:before {
+		color: inherit !important;
+	}
+}
+
+.tiki .chosen-container .chosen-results li.result-selected[class*="tracker-status-"] {
+	&:before {
+		top: 0;
+		width: auto;
+		height: auto;
+		margin-left: 0;
+	}
+}
+
+.tiki .chosen-container .chosen-results li.highlighted {
+	&[class*="tracker-status"]:before {
+		background-image: none;
+	}
+}
+
+.chosen-container .chosen-results li.result-selected.tracker-status-open,
+.chosen-container .chosen-results li.result-selected.tracker-status-o,
+.tracker-status-open, .tracker-status-o {
+	&:before {
+		content: "\f111";
+		color: green;
+		font-weight: 900;
+		background-image: none;
+	}
+}
+
+.chosen-container .chosen-results li.result-selected.tracker-status-pending,
+.chosen-container .chosen-results li.result-selected.tracker-status-p,
+.tracker-status-pending, .tracker-status-p {
+	&:before {
+		content: "\f042";
+		color: orange;
+		font-weight: 900;
+		background-image: none;
+	}
+}
+
+.chosen-container .chosen-results li.result-selected.tracker-status-closed,
+.chosen-container .chosen-results li.result-selected.tracker-status-c,
+.tracker-status-closed, .tracker-status-c {
+	&:before {
+		content: "\f057";
+		color: grey;
+		font-weight: 400;
+		background-image: none;
+	}
+}
+
+.edit-tabular {
+	padding-top: 15px;
+}
+
+.tiki .html-select-date,
+.tiki .html-select-time {
+	padding: 0 15px;
+	margin-bottom: 5px;
+	.col {
+		padding: 0 5px 0 0;
+		flex-grow: 0;
+	}
+	.chosen-container-single { min-width: 8em; }
+}
+
+.currency_number, .currency_code{
+	border: $input-btn-border-width solid $input-border-color !important
+}
+
+@media (max-width: breakpoint-max(sm)) {
+	.tracker-item-files {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+		li { padding-bottom: 5px; }
+	}
+}
+
+// vue.js field conditions defs
+
+.tracker-rules .actions .ui-predicate__row:first-child,
+.tracker-rules .else .ui-predicate__row:first-child {
+	// can't seem to remove the ui-predicate__logic row from the code, so hide it for now
+	display: none;
+}
+

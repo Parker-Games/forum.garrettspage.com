@@ -1,0 +1,218 @@
+/*  "good" option by jonnyb for Jqui (jqui.css) for Tiki Wiki CMS Groupware.
+	Visit http://themes.tiki.org for more information. */
+body {
+  color: #395bb0;
+}
+a,
+.btn-link {
+  color: #395bb0;
+}
+a:hover,
+.btn-link:hover,
+a:focus,
+.btn-link:focus {
+  color: #395bb0;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+	color: #fff;
+	background: #395bb0;
+}
+
+.btn-primary.disabled,
+.btn-secondary.disabled,
+.btn-success.disabled,
+.btn-info.disabled,
+.btn-warning.disabled,
+.btn-danger.disabled{
+	color: #fff;
+	background: #416fcc;
+}
+
+.btn-outline,
+.btn-link {
+	background: none;
+}
+
+.btn-link,
+.btn-link:hover {
+	border: none;
+}
+.btn-secondary {
+	border: 3px solid #b5dfb5;
+}
+.btn-success {
+	border: 3px solid #b5dfb5;
+}
+.btn-info {
+	border: 3px solid #c5e9f3;
+}
+.btn-warning {
+	border: 3px solid #f6ce95;
+}
+.btn-danger {
+	border: 3px solid #d9534f;
+}
+.btn-primary .badge {
+  color: #fff;
+  background-color: #395bb0;
+}
+
+.navbar-dark {
+	background-color: #395bb0;
+	border-color: #2d4789;
+}
+
+
+.bg-dark {	background: #395bb0 !important; }
+
+.topbar,
+.navbar-dark .navbar-nav .nav-link,
+.topbar .nav > li,
+.card-heading,
+.navbar-dark .navbar-collapse,
+.navbar-dark .navbar-form {
+	background: #395bb0;
+	background-image: none;
+	color: #fff;
+}
+.topbar .nav > li > a {
+	border-right: 1px solid #2d4789;
+	font-weight: bold;
+}
+.topbar .nav > li:first-of-type > a {
+	border-left: none;
+}
+
+.topbar,
+.topbar .navbar-dark .navbar-nav > li,
+.topbar .nav > li,
+.topbar > a,
+.topbar .navbar-dark .navbar-nav > li > a,
+.topbar .nav > li > a,
+.navbar-dark .navbar-link,
+.navbar-dark .navbar-text,
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+.topbar > a:hover,
+.topbar .navbar-dark .navbar-nav > li > a:hover,
+.topbar .nav > li > a:hover,
+.topbar > a:focus,
+.topbar .navbar-dark .navbar-nav > li > a:focus,
+.topbar .nav > li > a:focus,
+.navbar-dark .navbar-nav > li > a:hover,
+.navbar-dark .navbar-nav > li > a:focus,
+.navbar-dark .navbar-link:hover {
+  color: #e6e6e6;
+  background-color: #395bb0;
+}
+
+#col2 .card a,
+#col3 .card a,
+#bottom_modules .card a,
+#col2 .card a:visited,
+#col3 .card a:visited,
+#bottom_modules .card a:visited {
+  color: #395bb0;
+}
+.btn,
+.btn-primary,
+input[type="reset"],
+input[type="submit"],
+.button input {
+  text-transform: none;
+}
+.btn.btn-link,
+input[type="submit"].btn-link {
+  background: none;
+}
+.btn:hover,
+.btn-primary:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.button input:hover {
+  background: inherit;
+}
+.btn-link:hover {
+  background: none;
+}
+.sf-arrows .sf-with-ul:after {
+  border: 5px solid transparent;
+  border-top-color: #395bb0;
+}
+.cssmenu_vert.sf-arrows li > .sf-with-ul:after {
+  border-color: transparent;
+  border-left-color: #395bb0;
+  /* edit this to suit design (no rgba in IE8) */
+}
+.sf-arrows ul .sf-with-ul:after,
+.cssmenu_vert.sf-arrows ul > li > .sf-with-ul:after {
+  border-color: transparent;
+  border-left-color: inherit;
+  /* edit this to suit design (no rgba in IE8) */
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+  border-color: transparent;
+  border-left-color: inherit;
+}
+.cssmenu_vert.sf-arrows li > .sf-with-ul:focus:after,
+.cssmenu_vert.sf-arrows li:hover > .sf-with-ul:after,
+.cssmenu_vert.sf-arrows .sfHover > .sf-with-ul:after {
+  border-color: transparent;
+  border-left-color: inherit;
+}
+#col2 .cssmenu_vert.sf-arrows li > .sf-with-ul:after,
+#col3 .cssmenu_vert.sf-arrows li > .sf-with-ul:after {
+  border-color: transparent;
+  border-left-color: #395bb0;
+  /* edit this to suit design (no rgba in IE8) */
+}
+#col2 .cssmenu_vert.sf-arrows li > .sf-with-ul:focus:after,
+#col3 .cssmenu_vert.sf-arrows li > .sf-with-ul:focus:after,
+#col2 .cssmenu_vert.sf-arrows li:hover > .sf-with-ul:after,
+#col3 .cssmenu_vert.sf-arrows li:hover > .sf-with-ul:after,
+#col2 .cssmenu_vert.sf-arrows .sfHover > .sf-with-ul:after,
+#col3 .cssmenu_vert.sf-arrows .sfHover > .sf-with-ul:after {
+  border-color: transparent;
+  border-left-color: #395bb0;
+}
+#page-data a {
+  font-weight: bold;
+}
+#page-data {
+  font-size: 115%;
+}
+.card {
+  border-radius: 2px;
+}
+.card-header {
+  background: #395bb0;
+  margin: 0;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+	color: #fff;
+}
+
+.card-header .card-title {
+  color: #fff;
+}
+.topbar .cssmenu_horiz.sf-arrows > .menuSection0 > .sf-with-ul::after {
+  border: 5px solid transparent;
+  border-top-color: #ffffff;
+}
+.topbar .cssmenu_horiz.sf-arrows > .menuSection0:hover > .sf-with-ul::after {
+  border: 5px solid transparent;
+  border-top-color: #e6e6e6;
+}

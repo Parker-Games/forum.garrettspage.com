@@ -1,0 +1,53 @@
+/* Amelia theme newsletter stylesheet  */
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+body.fullscreen {
+  background: #108a93; }
+
+.bg-dark {
+  background: #ad1d28 !important; }
+
+body.fullscreen {
+  background: #108a93; }
+
+body.fullscreen {
+  background-color: #108a93; }
+
+body {
+  background: #108a93;
+  color: #ffffff;
+  font-family: "Cabin", Arial, sans-serif;
+  padding: 15px; }
+
+a, a:visited {
+  color: #e8d069;
+  text-decoration: underline; }
+
+a:hover {
+  color: #e8d069;
+  text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Lobster', cursive;
+  font-weight: 500;
+  color: inherit; }
+
+.card {
+  margin-bottom: 1.5;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem; }
+
+.card-header {
+  border-bottom: 1px solid transparent; }
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+  color: inherit; }
+  .card-title > a, .card-title > small, .card-title > .small, .card-title > small > a, .card-title > .small > a {
+    color: inherit; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Lobster', sans-serif;
+  font-weight: 500; }

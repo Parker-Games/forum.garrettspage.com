@@ -1,0 +1,36 @@
+/* Ohia theme newsletter stylesheet  */
+body {
+  background: #242424;
+  color: #e9ecef;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 15px; }
+
+a, a:visited {
+  color: #fd0006;
+  text-decoration: none; }
+
+a:hover {
+  color: #f4f4f4;
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit; }
+
+.card {
+  margin-bottom: 1.5;
+  background-color: #030511;
+  border: 1px solid transparent;
+  border-radius: 0.25rem; }
+
+.card-header {
+  border-bottom: 1px solid transparent; }
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+  color: inherit; }
+  .card-title > a, .card-title > small, .card-title > .small, .card-title > small > a, .card-title > .small > a {
+    color: inherit; }

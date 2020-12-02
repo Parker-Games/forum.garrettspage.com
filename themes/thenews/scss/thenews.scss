@@ -1,0 +1,12 @@
+//  $Id$ thenews/scss/thenews.scss compile to make
+/*  The News theme style sheet for Tiki Wiki CMS Groupware. */
+//@import url("//fonts.googleapis.com/css?family=Simonetta");
+@import url('https://fonts.googleapis.com/css?family=Mukta:800|Open+Sans|Source+Serif+Pro');
+
+@import "variables"; // Needs to come first, to override defaults.
+@import "../../../vendor_bundled/vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "../../base_files/scss/_tiki-variables.scss"; // Values/definitions for Tiki variables (outside of Bootstrap variables) such as _tiki-selectors.scss.
+@import "../../base_files/scss/_tiki-selectors.scss";
+@import "../../base_files/scss/_bs3-bs4-transition.scss";
+@import "_tiki-selectors.scss";
+@import "../../base_files/scss/_external-scripts.scss";

@@ -1,0 +1,1096 @@
+/* Strasa theme for TikiWiki CMS/Groupware, design by Patrick Allard,
+   mono option by jonnyb
+   released under LPGL license. For more information, visit http://themes.tiki.org. */
+
+/***** XHTML Elements ******/
+html,
+body {
+	background: #fff;
+}
+
+a,
+.pagination > li > a,
+.nav-pills > .active > a > .badge,
+.btn-link,
+.autotoc *,
+.popover button.btn-link.link-list,
+.popover button.btn-link.link-list .icon,
+.dropdown-item button.btn-link.link-list,
+.dropdown-item button.btn-link.link-list .icon {
+	color: #0056b3; /*#666666;*/
+}
+
+a:hover
+.autotoc a:hover,
+.popover button.btn-link.link-list:hover,
+.popover button.btn-link.link-list .icon:hover,
+.dropdown-item button.btn-link.link-list:hover,
+.dropdown-item button.btn-link.link-list .icon:hover {
+	color: #000000;
+}
+
+.tabs .nav > li > a {
+    color: #dddddd;
+}
+
+.tabs .nav > li.active > a {
+    color: #ffffff;
+}
+
+.navbar-dark {
+    background: #000000; /*#006699*/
+}
+
+.navbar-dark .navbar-collapse,
+.navbar-dark .navbar-form {
+    border-color: #000000;
+}
+
+.navbar-dark .navbar-nav > .open > a,
+.navbar-dark .navbar-nav > .open > a:hover,
+.navbar-dark .navbar-nav > .open > a:focus,
+
+.navbar-dark .navbar-nav > .active > a,
+.navbar-dark .navbar-nav > .active > a:hover,
+.navbar-dark .navbar-nav > .active > a:focus,
+
+.navbar-light .navbar-nav > .open > a,
+.navbar-light .navbar-nav > .open > a:hover,
+.navbar-light .navbar-nav > .open > a:focus,
+
+.navbar-light .navbar-nav > .active > a,
+.navbar-light .navbar-nav > .active > a:hover,
+.navbar-light .navbar-nav > .active > a:focus {
+    color: #ffffff;
+/*    background-color: #656565; */
+}
+
+.card-heading,
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    color: #ffffff;
+    background-color: #999999;
+    border-color: #999999;
+}
+
+.btn-primary {
+    border-color: #999999;
+}
+
+fieldset {
+	border: none;
+}
+
+legend {
+	color: #444444} /* IE7 */
+
+input,
+textarea,
+option,
+select,
+body.cke_show_borders,
+table.tablesorter thead tr.tablesorter-filter-row td input.tablesorter-filter,
+table.tablesorter thead tr.tablesorter-filter-row td input.dateFrom,
+table.tablesorter thead tr.tablesorter-filter-row td input.dateTo {
+	background: #fafafa;
+	color: #000;
+}
+
+html[dir=ltr] {	/* for ck editor */
+	background-color: #fafafa;
+}
+
+input,
+.jumbotron {
+    border: 1px solid;
+    border-color: #454545 #9b9b9b #9b9b9b #454545;
+}
+
+.jumbotron {
+    background: #ededed;
+}
+
+input[type=text],
+input[type=search],
+input[type=password],
+.form-control,
+.tiki .chosen-container-single .chosen-single,
+.tiki .chosen-container-active.chosen-with-drop .chosen-single,
+.tiki .chosen-container .chosen-drop,
+.tiki .chosen-container-multi .chosen-choices .search-choice {
+	background: #fafafa;
+	border-color: #878787;
+	color: #222222;
+}
+
+.chosen-container-single .chosen-single:not(.chosen-single-with-deselect) div::after {
+	background-color: #fff;
+	box-shadow: 4px 0 16px 16px	#fff;
+}
+
+.box-login_box input[type=text],
+.box-login_box input[type=password] {
+	background: #dddddd;
+	border: 1px solid #414141;
+	color: #222222;
+}
+
+input#search {
+	background: #dddddd;
+	border: 1px solid #414141;
+	color: #222222;
+}
+
+/* Links in buttons */
+/*.btn-primary,
+.btn-primary:visited,
+.nav-pills > li.active > a,
+.input-group-addon {
+	color: #fff;
+	background: #565656;
+	border-color: #878787 #343434 #343434 #878787;
+}*/
+
+
+.btn-link,
+.btn-primary.btn-link {
+	background: none;
+	border: none;
+	color: #666666;
+}
+
+.btn-primary {
+	border-color: #e7e7e7 #454545 #454545 #e7e7e7;
+}
+
+.btn.btn-secondary {
+	color: #e7cef8;
+	border-color: #e7cef8;
+}
+.btn.btn-info { color: #a0d4e3; }
+.btn.btn-info:hover { color: #449cbe; }
+.btn.btn-success { color: #57d457; }
+.btn.btn-success:hover { color: #4cae4c; }
+.btn.btn-warning { color: #eea236; }
+.btn.btn-warning:hover { color: #ce8536; }
+.btn.btn-danger { color: #f99390; }
+.btn.btn-danger:hover { color: #d43f3a; }
+/*
+.btn.btn-info:hover,
+.btn.btn-success:hover,
+.btn.btn-warning:hover,
+.btn.btn-danger:hover,
+.btn.btn-primary:hover,
+.btn.btn.btn-primary:hover,
+.nav-pills > li.active > a:hover,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+	border-color: #454545 #e7e7e7 #e7e7e7 #454545;
+    background: #333;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary.focus:active,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #ffffff;
+    background-color: #828282;
+    border-color: #000000;
+}*/
+
+.btn.btn-success {
+	border-color: #57d457;
+}
+.btn.btn-secondary {
+	border-color: #e7cef8;
+}
+.btn.btn-info {
+	border-color: #a0d4e3;
+}
+.btn.btn-warning {
+	border-color: #eea236;
+}
+.btn.btn-danger {
+	border-color: #f99390;
+}
+
+/***** Page Layout *****/
+
+#col2 .content {
+    background: #e5e5e5;
+}
+
+#footer {
+	color: #999;
+	background: #2e3035;
+}
+
+
+/* Site Header & Identity */
+.navbar.bg-dark,
+.layout_basic .top_modules,
+.layout_classic .top_modules.bg-dark,
+.top_modules,
+.tiki .ui-widget-header,
+.tiki .ui-state-default,
+.tiki .ui-widget-content .ui-state-default {
+	color: #fff;
+	background: #444 url('../images/headerbg.jpg') repeat-x 0 100% !important;
+
+}
+
+.layout_fixed_top_modules #top_modules,
+.navbar-fixed-top .container,
+.navbar.bg-light,
+.topbar,
+.topbar .navbar-light .navbar-nav > li,
+.topbar .nav > li,
+.btn:not(.btn-link),
+/*.nav-tabs > li > a,*/
+.input-group-addon,
+.siteloginbar_popup .dropdown-menu,
+.titleb {
+	background: #414141;
+	background: -moz-linear-gradient(top,  #414141 0%, #454545 9%, #555555 30%, #767676 65%, #8f8f8f 74%, #949494 78%, #a1a1a1 100%);
+	background: -webkit-linear-gradient(top,  #414141 0%,#454545 9%,#555555 30%,#767676 65%,#8f8f8f 74%,#949494 78%,#a1a1a1 100%);
+	background: linear-gradient(to bottom,  #414141 0%,#454545 9%,#555555 30%,#767676 65%,#8f8f8f 74%,#949494 78%,#a1a1a1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414141', endColorstr='#a1a1a1',GradientType=0 );
+}
+
+.btn.toolbar {
+	background: transparent;
+}
+
+
+.navbar-light .navbar-light,
+.navbar-dark .navbar-dark {
+	background: transparent !important;
+	border: none;
+}
+
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .cssmenu_horiz > a,
+.navbar-light .dropdown-toggle,
+.navbar-light a.nav-link.dropdown-toggle,
+.navbar-light h1.sitetitle a,
+.navbar-light h2.sitesubtitle,
+.navbar-light .cssmenu_horiz .menuLevel0 > a {
+	color: #fff;
+}
+
+/* #header text selectors, if needed */
+.sitetitles {
+	color: #fff;
+}
+
+.sitetitle a,
+.sitetitle a:link,
+.sitetitle a:hover {
+	color: #fff;
+}
+
+/* tiki-top_bar.tpl - menu and search */
+/**:first-child+html #tiki-top {
+	background-color: #444;
+}*/
+
+#tiki-top a,
+#tiki-top a:visited {
+	color: #ebebeb;
+}
+
+#tiki-top a:hover {
+	color: #fff}
+
+a.flip,
+a.flip:visited {
+	color: #e5e5e5;
+	font-size: 90%}
+
+a.flip:hover {
+	color: #666666;
+	text-decoration: none}
+
+.share a,
+.share a:visited {
+	background: transparent url('../images/fold-topright.jpg') 0 0 no-repeat;
+	color: #fff;
+}
+
+.share a:hover {
+	color: #fff;
+}
+
+.share {
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.error,
+#error {
+	background: #f8f8f8 !important;
+	color: #000;
+}
+
+/* end layout divs, etc. */
+/** Border boxes (if any) **/
+/****** Menus ******/
+/** CSS (suckerfish) menus **/
+
+/*.cssmenu_horiz li ul li,
+.cssmenu_vert li ul li {
+	border: 1px solid #233039;
+	background: #e5e5e5;
+}
+
+.cssmenu_horiz li ul li:first-child,
+.cssmenu_vert li ul li:first-child {
+	border-top: 1px solid #233039;
+}
+
+.header .cssmenu_horiz li:hover {
+	background: #212121;
+}
+
+.cssmenu_ver li:hover {
+	background: none;
+}*/
+
+.cssmenu_horiz a,
+.cssmenu_vert a {
+	color: #666666;
+}
+
+.cssmenu_vert a,
+.cssmenu_vert a:visited {
+	color: #666666;
+}
+
+.cssmenu_vert.sf-arrows li > .sf-with-ul::after {
+    border-color: transparent;
+    border-left-color: #666666;
+}
+
+.cssmenu_vert a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.cssmenu_vert ul a,
+.cssmenu_vert ul a:visited {
+	color: #666666;
+}
+
+.cssmenu_vert ul a:hover {
+	color: #000000;
+}
+
+.header .cssmenu_horiz a,
+.header .cssmenu_horiz a:visited {
+	background: none;
+	border: none;
+	color: #fff;
+	padding: 3px 5px 6px
+}
+
+.header .cssmenu_horiz a:hover {
+	background: #000;
+	border: none;
+	color: #fff;
+}
+
+.navbar-light .cssmenu_horiz > li > a {
+    color: #ffffff;
+}
+
+.navbar-light .cssmenu_horiz > li > a:hover {
+    background: transparent;
+}
+
+.header .cssmenu_horiz li ul li {
+	border: 1px solid #a9a9a9;
+	background: #4c4c4c;
+}
+
+.header .cssmenu_horiz li ul li:first-child,
+.cssmenu_vert li ul li:first-child {
+	border-top: 1px solid #a9a9a9;
+}
+
+.header .cssmenu_horiz li ul li a:hover {
+	background: #000;
+}
+
+/** Links in other menus **/
+
+.separator {
+	border-top: 1px solid #ccc;
+}
+
+.separator a:link,
+.separator a:visited,
+.separator a:hover {
+	color: #000000;
+}
+
+.linkmenu:hover {
+	color: #000000;
+}
+
+a.linkmodule:hover {
+	color: #000000;
+}
+
+/****** Misc. Global Classes (layout and style) ****/
+
+.bannertext:hover {
+	color: #000000;
+}
+
+.adminanchors {
+	background: #444444 !important;
+}
+
+/* New Help section */
+
+.help_section_select {
+	background: white;
+}
+
+.help_sections {
+	background: white;
+}
+
+.help_section {
+	background: #fafafa;
+}
+
+.site_report a {
+	border-left: 1px solid #555555;
+	border-right: 1px solid #555555;
+}
+
+/** Modules **/
+
+#col2 .box {
+	background: #e5e5e5;
+	border-bottom: 1px solid #aaa;
+}
+
+#col2 .box-title {
+	color: #000;
+}
+
+#col3 .box {
+	border-bottom: 1px solid #cfcfcf;
+}
+
+a.flipmodtitle:hover img {
+	border: 1px #cccccc solid !important;
+}
+
+/** Other boxes **/
+
+.cbox {
+	border: 1px solid #444;
+}
+
+.cbox-title {
+	color: #ebebeb;
+	background: #999;
+}
+
+.cbox-title a:link,
+.cbox-title a:visited {
+	color: #ebebeb;
+}
+
+.cbox-title a:hover {
+	color: #fff;
+}
+
+.simplebox {
+	border: 1px solid #aaa;
+	background: #fff;
+}
+.calhighlight,
+.page-item.active .page-link,
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	color: #fff;
+	background: #b3b5b5;
+}
+
+.highlight {
+	background: #e5e5e5;
+}
+
+/***** Tables, Tabs and Lists ****/
+/** Tables **/
+tr.odd {
+	background: #f0f0f0;
+}
+
+tr.even {
+	background: #dcdcdc;
+}
+
+td.odd {
+	background: #f0f0f0;
+	color: #000;
+}
+
+td.even {
+	background: #dcdcdc;
+	color: #000;
+}
+
+/* headings */
+
+.table th,
+.caltable td.heading,
+.calendarweek td.heading,
+table.tablesorter thead tr.tablesorter-headerRow th.tablesorter-header {
+	color: #ebebeb;
+	background-color: #444;
+}
+
+th a:link,
+th a:visited,
+td.heading a:link,
+td.heading a:visited,
+.caltable td.heading a:link,
+.caltable td.heading a:visited {
+	color: #ebebeb;
+}
+
+.tiki_mytiki .cbox-data th {
+	color: #888;
+	background: #eee;
+}
+
+.tiki_mytiki .cbox-data th a:link,
+.tiki_mytiki .cbox-data th a:visited {
+	color: #666;
+}
+
+/*.thumbnail {
+    background-color: #686868;
+    border: 1px solid #dddddd;
+}*/
+
+
+a.forumnameread {
+	color: #666666;
+}
+
+/** Tabs **/
+.tabs {
+	border-bottom: solid 1px #565656 !important;
+}
+
+.nav-tabs .nav-item .nav-link {
+	color: #414141;
+	background-color: #e5e5e5;
+}
+
+.nav-tabs .nav-item .nav-link:active {
+	color: #414141;
+	background-color: #f2f2f2;
+}
+
+.nav-tabs .nav-item .nav-link:hover {
+	color: #fff;
+	background: #565656;
+}
+
+/* active (current) tab */
+.nav-tabs .nav-item .nav-link.active {
+	background-color: #e5e5e5 !important;
+	border: solid 1px #565656 !important;
+}
+
+.tab-pane {
+	background: #e5e5e5;
+}
+
+.tabs {
+	border: 1px solid #fafafa;
+}
+
+.statuson {
+	background: #565656;
+	border: 1px inset #343434;
+
+}
+/*** Feature-specific selectors ***/
+/***** Wiki *****/
+
+h1.pagetitle a,
+h1.pagetitle a:visited,
+h1.pagetitle a:hover,
+a.pagetitle,
+a.pagetitle:visited,
+a.pagetitle:hover {
+	color: #000;
+}
+
+.titlebar {
+	border-top: 1px solid #555555;
+	border-bottom: 1px solid #555555;
+}
+
+.wikitext h2 {
+	border-bottom-color: #666;
+	color: #3F3F3F;
+}
+
+.wikitext h4 {
+	border-bottom:1px dashed #ccc;
+	color:#3F3F3F;
+}
+
+.wikitext .fancylist li {
+	background: transparent url('../images/list_icon.png') top left no-repeat;
+	color: #f90;
+}
+
+.wikitext .fancylist li p {
+	color: #000;
+}
+
+.wikitable {
+	border: 1px solid #A9A9A9;
+}
+
+.wikicell {
+	border: 1px solid #a9a9a9;
+}
+
+/* editable wiki section */
+.split {
+	border: 1px dashed #555555;
+}
+
+#wikihelp-tab table,
+#wikihelp-tab table td {
+	border: solid 1px #555555;
+}
+
+/* Needed esp. for light-on-dark theme */
+
+/* Wiki plugins */
+/* Code plugin  */
+
+.code {
+	border: 1px dashed #a9a9a9;
+	background: #F5F5F5;
+}
+
+.codelisting {
+	background: #F5F5F5;
+	border: 1px dashed #555555;
+}
+
+.codecaption {
+	border: 1px solid #555555;
+	color: #555555;
+	background: #F5F5F5;
+}
+
+/** Wiki tocs **/
+
+.tocnav {
+	background: #EBEBEB;
+}
+
+/* TOC */
+.toc {
+	border-top: 1px dotted #a9a9a9;
+	border-bottom: 1px dotted #a9a9a9;
+}
+
+/* Wiki diff styles */
+.diff td {
+	border: 1px solid #555555;
+}
+
+.diff div {
+	border-top: 1px solid #555555;
+}
+
+.diffheader {
+	background: #555555;
+}
+
+.diffadded {
+	background: #CCFFCC;
+}
+
+.diffdeleted {
+	background: #FFCCCC;
+}
+
+.diffinldel {
+	background: #FFCCCC;
+}
+
+.diffbody {
+	background: #F2F4F5;
+}
+
+.diffchar {
+	color: red;
+}
+
+/***** Articles ****/
+.articletopline,
+.articlesubtitle {
+	background: #343434;
+	color: #fff}
+
+.articletitle h2 {
+	background: #666 url('../images/lightbg.jpg') repeat-x 0 100%;
+	color: #fff;
+	padding: 10px 5px;
+	margin: 0}
+
+.articletitle h2 a,
+.articletitle h2 a:visited,
+.titleb {
+	color: #fff;
+	text-decoration: none;
+	padding: 1.5px;
+}
+
+/***** Blogs *****/
+
+.postinfo a {
+	color: #666666;
+}
+
+body.tiki_blogs .author_actions .actions {
+	background: url('../images/login.jpg') no-repeat 100% 0;
+}
+
+/***** Forums *****/
+
+.post .postbody {
+	border: solid 1px #a9a9a9;
+	border-top: solid 1px gray;
+	background: #fff;
+}
+
+.post .postbody .content {
+	color: #000;
+	background: #fff !important;
+}
+
+.tiki_blogs .postbody-title,
+.post .postbody-title {
+	background: #111 url('../images/lightbg.jpg') repeat-x 0 100%;
+}
+
+.post .postbody-title .title,
+.post .postbody-title .actions,
+.post .postbody-title .title a.link {
+	color: #fff;
+}
+
+.post .postbody .attachments {
+	border-top: 1px dotted #D9D9D9;
+}
+
+.post .contribution {
+	background: #F0F8FF;
+	border: 1px solid #e5e5e5;
+}
+
+.post .avatar {
+	border-color: #aaaaaa #aaaaaa #fafafa #fafafa;
+}
+
+.forum_actions .actions {
+	background: #e5e5e5;
+}
+
+.forum_actions .headers .title {
+	background: #233a48;
+	color: #fff;
+}
+
+/* Comments */
+
+/* Comments moderation */
+.post-approved-n {
+	border-left: 3px dotted blue;
+}
+
+.post-approved-r {
+	border-left: 3px double red;
+}
+
+/***** Categories *****/
+
+/***** Tags (freetags) *****/
+
+/***** File Galleries *****/
+
+/***** Trackers *****/
+
+
+/* also for categorize.tpl */
+.multiselect {
+	border: 1px solid #555555;
+}
+
+/***** Calendar *****/
+/* Overrides calendar.css, etc. */
+.calprio1 a,
+.calprio2 a,
+.calprio3 a,
+.calprio4 a,
+.calprio5 a,
+.calprio6 a,
+.calprio7 a,
+.calprio8 a,
+.calprio9 a {
+	color: #666666;
+}
+
+.buttonon a,
+.calbuttonon a,
+.calbuttonoff a {
+	color: #fff;
+}
+
+.box-data .fc a.today,
+.box-data td a.today {
+	background: #D4D0C8;
+	border: solid 1px #555555;
+}
+
+.caltable .calfocuson a {
+	color: #000;
+}
+
+.calinput {
+	background: #223845;
+}
+
+.calfocuson + .calcontent {
+	background: #F5F5F5;
+}
+
+th.days {
+	color: #e5e5e5;
+}
+
+.caltable .weeks {
+	background: #212121;
+	color: #e5e5e5;
+}
+
+.caltable .odd,
+.caltable .even {
+	border: 1px solid #a9a9a9;
+}
+
+.caltable .odd,
+table.tablesorter thead tr.tablesorter-filter-row {
+	background: #f0f0f0;
+}
+
+.caltable .even {
+	background: #dcdcdc;
+}
+
+/*****  Polls  *****/
+
+.pollr {
+	color: black;
+}
+
+/***** FAQs *****/
+
+/***** Quizzes *****/
+
+/***** Shoutbox *****/
+
+/***** Directory *****/
+
+.dircategs {
+	border: 1px solid #555555;
+}
+
+
+/***** Messages *****/
+.prio1,
+.prio2,
+.prio3,
+.prio4,
+.prio5 {
+	border: 1px solid #a9a9a9;
+}
+
+.prio1 {
+	background: #F7F9CA;
+}
+
+.prio2 {
+	background: #F7F9EA;
+}
+
+.prio3 {
+	background: #F7F9FA;
+}
+
+.prio4 {
+	background: #F7F9FD;
+}
+
+.prio5 {
+	background: #F7F9FF;
+}
+
+.messureadflag {
+	background: #a9a9a9;
+}
+
+.messureadhead {
+	background: #dcdcdc;
+}
+
+.messureadbody {
+	background: #dcdcdc;
+}
+
+.readlink {
+	color: black;
+}
+
+/***** Sheets *****/
+
+.plugin-form-float {
+	border: solid 2px #555555;
+}
+
+/***** TikiSheet Default Style *****/
+.default thead td,
+.default tfoot td {
+	background: #223845;
+	color: #e5e5e5;
+}
+
+/***** mypage *****/
+
+/* css/admin.css overrides */
+a.admbox {
+	border: 1px solid #223845;
+	background-color: #f0f0f0;
+}
+
+a.admbox:hover,
+a.admbox:focus,
+a.admbox:active {
+	background-color: #dcdcdc;
+	border: 1px solid #555555;
+}
+
+a.admbox.off {
+	border: 1px solid #a9a9a9;
+}
+
+a.admbox.off:hover,
+a.admbox.off:focus,
+a.admbox.off:active {
+	border: 1px solid #a9a9a9;
+}
+
+/* MiniChat  */
+
+
+body.fixed_width {
+	background: #424242 url('../images/body-bg_fw.gif') repeat-x !important
+}
+/* end of file */
+/*
+=================================================
+Theme Customizer Generated CSS
+=================================================
+*/
+/* by g
+a {
+	color: #333333;
+}
+.page-header,.topbar {
+	background-color: transparent;
+}
+.bg-dark {
+	background-color: #343a40;
+}
+.navbar-dark .navbar-nav .nav-link {
+	color: #ffffff;
+}
+.navbar-dark .navbar-nav .active > .nav-link {
+	color: #323232;
+} */
+/*.dropdown-menu {
+	background-color: #323232;
+	color: #ffffff;
+	border-radius: 4px;
+}*/ /* bg g
+.dropdown-item {
+	color: #000000;
+	background-color: #ebebeb;
+}
+.datepicker.state.default {
+	background-color: #f00000;
+	color: #ffffff;
+}
+*/
+/*
+.btn-light {
+	background-color: #ffffff;
+	border-color: #000000;
+	color: #ffff00;
+}
+.btn-secondary {
+	background-color: #ffffff;
+	border-color: #000000;
+	color: #ffff00;
+}
+.btn-primary {
+	background-color: #ffffff;
+	border-color: #000000;
+	color: #ffff00;
+}
+.btn-info {
+	background-color: #ffffff;
+	border-color: #000000;
+	color: #ffff00;
+}
+.alert-danger {
+	background-color: #ffff00;
+	border-color: #000000;
+	color: #000000;
+}
+.alert-info {
+	background-color: #505050;
+	border-color: #f7ff00;
+	color: #ffffff;
+} */

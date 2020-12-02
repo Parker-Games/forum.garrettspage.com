@@ -1,0 +1,252 @@
+// $Id$
+// This file is for additional SCSS rules beyond what are in variables.scss.
+// Image path example:
+$imagePath: "../images/";
+// body {
+//	background-image: url('#{$imagePath}bg.jpg');
+// }
+
+
+.container:not(.in-navbar) {
+	border: 1px solid #006669;
+}
+
+header.container {
+	margin-top: 30px;
+	border-bottom: none;
+}
+
+.bg-dark .top_modules {
+	background: url('#{$imagePath}header.jpg') repeat-x bottom;
+//	margin-left: 0;
+//	margin-right: 0;
+	a,
+	.btn-link {
+		color: #f5f5f5;
+		&:hover {
+			color: darken(#f5f5f5,10%);
+		}
+	}
+}
+
+.side-col-toggle-container {
+	margin-top: -1.4rem;
+}
+
+.navbar-fixed-top .container {
+	border: none;
+}
+
+.layout_social .navbar-light a,
+.layout_social_modules .navbar-light a {
+	color: #f5f5f5;
+}
+
+.navbar-dark a,
+.navbar-dark .navbar-brand,
+.dropdown-item,
+.dropdown-item a,
+.dropdown-item button.btn-link.link-list,
+.dropdown-menu .tikihelp {
+	color: $navbar-dark-color;
+}
+.navbar-dark a:hover,
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
+	color: $navbar-dark-hover-color;
+	background-color: transparent;
+}
+
+
+.navbar-dark a:hover,
+.navbar-dark a:focus {
+	color: $navbar-dark-hover-color;
+	//	background-color: $bg-dark-link-hover-bg;
+}
+
+.navbar-dark .active a,
+.navbar-dark .active a:hover,
+.navbar-dark .active a:focus {
+	color: $navbar-dark-active-color;
+	//  background-color: #063065;
+}
+
+.navbar-dark .disabled a,
+.navbar-dark .disabled a:hover,
+.navbar-dark .disabled a:focus {
+	color: $navbar-dark-disabled-color;
+	background-color: transparent;
+}
+
+.bg-dark,
+.navbar:not(.bg-dark) .bg-dark,
+.container:not(.in-navbar) .bg-dark .navbar-collapse,
+.bg-dark .navbar-form,
+#topbar_modules.bg-dark,
+.admin-navbar.bg-dark .bg-dark {
+//	background: #426d95 url('#{$imagePath}header.jpg') repeat-x;
+//	background-size:
+	color: #f5f5f5 !important;
+	border: none;
+	background: #3e7ca1; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e7ca1), color-stop(3%,#609ec3), color-stop(5%,#163866), color-stop(8%,#0b2d5b), color-stop(11%,#0f2658), color-stop(16%,#002552), color-stop(24%,#002d57), color-stop(27%,#052b58), color-stop(43%,#0c3867), color-stop(57%,#11406e), color-stop(76%,#1b507c), color-stop(86%,#235685), color-stop(100%,#1c5b87)) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3e7ca1 0%,#609ec3 3%,#163866 5%,#0b2d5b 8%,#0f2658 11%,#002552 16%,#002d57 24%,#052b58 27%,#0c3867 43%,#11406e 57%,#1b507c 76%,#235685 86%,#1c5b87 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3e7ca1 0%,#609ec3 3%,#163866 5%,#0b2d5b 8%,#0f2658 11%,#002552 16%,#002d57 24%,#052b58 27%,#0c3867 43%,#11406e 57%,#1b507c 76%,#235685 86%,#1c5b87 100%) !important; /* Opera 11.10+ */
+	background: linear-gradient(to bottom,  #3e7ca1 0%,#609ec3 3%,#163866 5%,#0b2d5b 8%,#0f2658 11%,#002552 16%,#002d57 24%,#052b58 27%,#0c3867 43%,#11406e 57%,#1b507c 76%,#235685 86%,#1c5b87 100%) !important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e7ca1', endColorstr='#1c5b87',GradientType=0 ) !important; /* IE6-9 */
+}
+
+.bg-dark {
+  .navbar-brand,
+  .nav-link,
+  button.dropdown-toggle,
+  .cssmenu_horiz > li > a {
+	color: #f5f5f5 !important
+  }
+}
+
+.fixed-top .top_modules {
+  background: transparent;
+}
+
+.bg-dark .bg-dark { background: transparent !important; }
+
+#topbar_modules .box-search .form-group {
+	margin-bottom: 0;
+}
+
+//#topbar_modules .box-search .form-group input[type="text"] {
+//	margin-top: 5px;
+//	height: 28px;
+//}
+
+//.layout_social_modules .navbar-light a:hover,
+
+.layout_social .navbar-light .cssmenu_horiz > li > a:hover,
+.layout_social_modules .navbar-light > a:hover,
+.bg-light,
+.navbar-light .navbar-nav > li > a:hover,
+.navbar-light .navbar-nav > li > a:focus,
+#topbar_modules.navbar-light .navbar-nav > .active > a,
+#topbar_modules.navbar-light .navbar-nav > .active > a:hover,
+#topbar_modules.navbar-light .navbar-nav > .active > a:focus {
+	color: #3e7ca1 !important;
+//	background: url('#{$imagePath}page.jpg') repeat-x;
+	background: #dbdbdb; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(2%,#b6b6b6), color-stop(3%,#acacac), color-stop(5%,#ababab), color-stop(10%,#c8c8c8), color-stop(17%,#d4d4d4), color-stop(48%,#e6e6e6), color-stop(60%,#eaeaea), color-stop(77%,#f3f3f3), color-stop(90%,#fdfdfd), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #dbdbdb 0%,#b6b6b6 2%,#acacac 3%,#ababab 5%,#c8c8c8 10%,#d4d4d4 17%,#e6e6e6 48%,#eaeaea 60%,#f3f3f3 77%,#fdfdfd 90%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #dbdbdb 0%,#b6b6b6 2%,#acacac 3%,#ababab 5%,#c8c8c8 10%,#d4d4d4 17%,#e6e6e6 48%,#eaeaea 60%,#f3f3f3 77%,#fdfdfd 90%,#ffffff 100%); /* Opera 11.10+ */
+	background: linear-gradient(to bottom,  #dbdbdb 0%,#b6b6b6 2%,#acacac 3%,#ababab 5%,#c8c8c8 10%,#d4d4d4 17%,#e6e6e6 48%,#eaeaea 60%,#f3f3f3 77%,#fdfdfd 90%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.bg-light {
+  .navbar-brand,
+  .nav-link,
+  button.dropdown-toggle,
+  .cssmenu_horiz > li > a {
+	color: #3e7ca1 !important
+  }
+}
+
+.navbar {
+	margin-bottom: 0;
+	border: none;
+}
+
+.middle {
+	background: #ffffff url('#{$imagePath}page.jpg') repeat-x;
+	padding-bottom: 20px;
+}
+
+.col1,
+.col3 {
+	padding-top: 30px;
+	background: #ffffff url('#{$imagePath}page.jpg') repeat-x;
+}
+
+.side-col-toggle + .col1,
+.side-col-toggle + .col1 + .col3 {
+  background-position: 0 -30px;
+}
+
+body.fullscreen {
+	background: #ffffff url('#{$imagePath}page.jpg') repeat-x;
+	.container { border: none; }
+}
+
+.col2 {
+	background: #a8cce2 url('#{$imagePath}columnbg.jpg') repeat-x;
+}
+
+.side-col-toggle + .col + .col2 { background-position: 0 -30px; }
+
+.card.module {
+	border: none;
+	background: none;
+}
+
+.card.module .card-header {
+	border: none;
+	border-bottom: 1px solid #57a5d0;
+	background: none;
+}
+
+.card.module .card-title {
+	color: #93554a;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+.module legend { font-size: .9rem; }
+
+.topbar { margin-bottom: 0; }
+
+.topbar + .row,
+.layout_social > .container {
+	background: #ffffff url('#{$imagePath}page.jpg') repeat-x;
+}
+
+.topbar + .row {
+	border-width: 0 1px;
+}
+
+#bottom_modules {
+	background: #A8CCE2;
+	border-top: none;
+}
+
+.cssmenu_horiz li ul,
+.cssmenu_vert li ul {
+	padding: 5px 0;
+	margin: 2px 0 0; // override default ul
+	//  font-size: $font-size-base;
+	background-color: $dropdown-bg;
+	border: 1px solid $dropdown-border-color;
+	border-radius: $border-radius;
+	@include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+
+	// Links within the dropdown menu
+	> li > a {
+		padding: 3px 20px;
+		font-weight: normal;
+		line-height: $line-height-base;
+		color: $dropdown-link-color;
+	}
+}
+
+.autotoc .dropdown-item {
+	color: $link-color;
+}
+
+// Fix bad contrast
+.dropdown-item.text-danger {
+	background: #fff;
+	border-radius: 0;
+	&:hover {
+		color: #fff !important;
+		background-color: #d9534f;
+	}
+}

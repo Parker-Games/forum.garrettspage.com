@@ -1,0 +1,39 @@
+// $Id$
+/* Adapted by the Tiki Community for Tiki Wiki CMS Groupware.
+ Original Bootswatch information:
+ */
+/*!
+ * Bootswatch v4.0.0-alpha.6
+ * Homepage: https://bootswatch.com
+ * Copyright 2012-2017 Thomas Park
+ * Licensed under MIT
+ * Based on Bootstrap
+*/
+
+@import "variables"; // Needs to come first, to override defaults.
+@import "../../../vendor_bundled/vendor/twbs/bootstrap/scss/bootstrap.scss";
+@import "../../base_files/scss/_tiki-variables.scss"; // Values/definitions for Tiki variables (outside of Bootstrap variables) such as _tiki-selectors.scss.
+@import "_bootswatch.scss";
+@import "../../base_files/scss/_tiki-selectors.scss";
+@import "../../base_files/scss/_bs3-bs4-transition.scss";
+@import "../../base_files/scss/_external-scripts.scss";
+
+// overriding the default transparent color for jquery-ui chosen dropdowns
+.chosen-container .chosen-drop {
+    background-color: #fff;
+    div { background-color: #fff; }
+}
+
+input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"],
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-check-input {
+    margin-top: 0;
+}

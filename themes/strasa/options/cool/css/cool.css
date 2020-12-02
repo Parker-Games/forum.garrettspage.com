@@ -1,0 +1,982 @@
+/* Strasa theme for TikiWiki CMS/Groupware, design by Patrick Allard,
+   mono option by jonnyb
+   released under LPGL license. For more information, visit http://themes.tiki.org. */
+
+/***** XHTML Elements ******/
+
+
+a,
+.pagination > li > a,
+.nav-pills > .active > a > .badge,
+.btn-link,
+.autotoc *,
+.popover button.btn-link.link-list,
+.popover button.btn-link.link-list .icon,
+.dropdown-item button.btn-link.link-list,
+.dropdown-item button.btn-link.link-list .icon {
+	color: #006699;
+}
+
+.cssmenu_horiz ul li a,
+.cssmenu_vert ul li a,
+.cssmenu_horiz ul li button.btn-link.link-list,
+.cssmenu_vert ul li button.btn-link.link-list {
+	background: transparent;
+}
+
+.cssmenu_horiz ul li:not(.dropdown-item) button.btn-link.link-list,
+.cssmenu_vert ul li:not(.dropdown-item) button.btn-link.link-list {
+	font-weight: normal;
+}
+
+a:hover,
+.autotoc a:hover,
+.popover button.btn-link.link-list:hover,
+.popover button.btn-link.link-list .icon:hover,
+.dropdown-item button.btn-link.link-list:hover,
+.dropdown-item button.btn-link.link-list .icon:hover {
+	color: #000000;
+}
+
+/*.navbar-dark:not(#topbar) {
+    background: #000000;
+}*/
+
+.navbar-dark:not(#topbar)  .navbar-collapse,
+.navbar-dark:not(#topbar)  .navbar-form {
+    border-color: #000000;
+}
+
+.navbar-dark .navbar-nav > .open > a,
+.navbar-dark .navbar-nav > .open > a:hover,
+.navbar-dark .navbar-nav > .open > a:focus,
+
+.navbar-dark .navbar-nav > .active > a,
+.navbar-dark .navbar-nav > .active > a:hover,
+.navbar-dark .navbar-nav > .active > a:focus,
+
+.navbar-light .navbar-nav > .open > a,
+.navbar-light .navbar-nav > .open > a:hover,
+.navbar-light .navbar-nav > .open > a:focus,
+
+.navbar-light .navbar-nav > .active > a,
+.navbar-light .navbar-nav > .active > a:hover,
+.navbar-light .navbar-nav > .active > a:focus {
+    color: #000;
+/*    background-color: #656565; */
+}
+
+#col2 .card-header { color: #000; }
+
+.card-heading,
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    color: #ffffff;
+    background-color: #999999;
+    border-color: #999999;
+}
+
+.btn-primary {
+    border-color: #999999;
+}
+
+fieldset {
+	border: none;
+}
+
+input,
+textarea,
+option,
+select,
+body.cke_show_borders,
+table.tablesorter thead tr.tablesorter-filter-row td input.tablesorter-filter,
+table.tablesorter thead tr.tablesorter-filter-row td input.dateFrom,
+table.tablesorter thead tr.tablesorter-filter-row td input.dateTo {
+	background: #F3FCFE;
+	color: #000;
+}
+
+input, .jumbotron {
+	border: 1px solid;
+	border-color: #454545 #9b9b9b #9b9b9b #454545;
+}
+
+.jumbotron {
+	background: #ededed;
+}
+
+input[type=text],
+input[type=search],
+input[type=password],
+.form-control,
+.tiki .chosen-container-single .chosen-single,
+.tiki .chosen-container-active.chosen-with-drop .chosen-single,
+.tiki .chosen-container .chosen-drop,
+.tiki .chosen-container-multi .chosen-choices .search-choice {
+	background: #f3fcfe;
+	border-color: #223845 #4d7b9b #4d7b9b #223845;
+}
+
+.chosen-container-single .chosen-single:not(.chosen-single-with-deselect) div::after {
+	background-color: #fff;
+	box-shadow: 4px 0 16px 16px	#fff;
+}
+
+.box-login_box input[type=text],
+.box-login_box input[type=password] {
+	background: #E7F8FD;
+	border: 1px solid #33CCFF;
+	color: #517298;
+}
+
+input#search {
+	background: #E7F8FD;
+	border: 1px solid #33CCFF;
+	color: #517298;
+}
+
+/* Links in buttons */
+.btn:not(.link-list),
+.btn-primary,
+.btn-primary:visited,
+.nav-pills > li.active > a,
+.input-group-addon,
+input[type=reset],
+input[type=submit],
+.button input {
+	color: #4c4c4c;
+	font-weight: bold;
+	border: 1px solid #acacac;
+	background: #f5f5f5;
+	background: -moz-linear-gradient(top,  #f5f5f5 0%, #f7f7f7 7%, #f5f5f5 9%, #f6f6f6 47%, #f4f4f4 54%, #f5f5f5 66%, #f7f7f7 67%, #f5f5f5 68%, #f6f6f6 95%, #f1f1f1 96%, #e7e7e7 97%, #d8d8d8 98%, #c4c4c4 99%, #adadad 100%);
+	background: -webkit-linear-gradient(top,  #f5f5f5 0%,#f7f7f7 7%,#f5f5f5 9%,#f6f6f6 47%,#f4f4f4 54%,#f5f5f5 66%,#f7f7f7 67%,#f5f5f5 68%,#f6f6f6 95%,#f1f1f1 96%,#e7e7e7 97%,#d8d8d8 98%,#c4c4c4 99%,#adadad 100%);
+	background: linear-gradient(to bottom,  #f5f5f5 0%,#f7f7f7 7%,#f5f5f5 9%,#f6f6f6 47%,#f4f4f4 54%,#f5f5f5 66%,#f7f7f7 67%,#f5f5f5 68%,#f6f6f6 95%,#f1f1f1 96%,#e7e7e7 97%,#d8d8d8 98%,#c4c4c4 99%,#adadad 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#adadad',GradientType=0 );
+}
+
+.btn.btn-secondary { color: #7400c3; }
+.btn.btn-secondary:hover { color: #8e00e6; }
+.btn.btn-info { color: #1e4d5f; }
+.btn.btn-info:hover { color: #449cbe; }
+.btn.btn-success { color: #29a230; }
+.btn.btn-success:hover { color: #4cae4c; }
+.btn.btn-warning { color: #eea236; }
+.btn.btn-warning:hover { color: #ce8536; }
+.btn.btn-danger { color: #ed413c; }
+.btn.btn-danger:hover { color: #d43f3a; }
+
+/*.btn.btn-info:hover,
+.btn.btn-success:hover,
+.btn.btn-warning:hover,
+.btn.btn-danger:hover,
+.btn.btn-primary:hover,
+.btn.btn-primary:hover,*/
+.nav-pills > li.active > a:hover,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+	background: #f5f5f5 url(../images/headerbg.jpg) repeat-x 0 105%;
+	color: #757575}
+
+.btn.btn-primary:active:hover,
+.btn.btn-secondary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn.btn-primary:active:focus,
+.btn.btn-secondary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn.btn-primary.focus:active,
+.btn.btn-secondary.active.focus,
+.open > .dropdown-toggle.btn-secondary.focus  {
+	border-color: #223845 #41cbe7 #41cbe7 #223845;
+}
+
+/***** Page Layout *****/
+/** off-screen **/
+
+
+/* end Type 1 layout divs, etc. */
+
+
+/* Site Header & Identity */
+/*.navbar.bg-dark,*/
+.layout_social .fixed-top.navbar.bg-light,
+.layout_social .fixed-top.navbar.bg-dark,
+.layout_basic .top_modules,
+.layout_classic .top_modules.bg-dark,
+.layout_classic .top_modules.bg-light {
+	background: #f5f5f5 !important;
+	background: -moz-linear-gradient(top,  #f5f5f5 0%, #f7f7f7 7%, #f5f5f5 9%, #f6f6f6 47%, #f4f4f4 54%, #f5f5f5 66%, #f7f7f7 67%, #f5f5f5 68%, #f6f6f6 95%, #f1f1f1 96%, #e7e7e7 97%, #d8d8d8 98%, #c4c4c4 99%, #adadad 100%) !important;
+	background: -webkit-linear-gradient(top,  #f5f5f5 0%,#f7f7f7 7%,#f5f5f5 9%,#f6f6f6 47%,#f4f4f4 54%,#f5f5f5 66%,#f7f7f7 67%,#f5f5f5 68%,#f6f6f6 95%,#f1f1f1 96%,#e7e7e7 97%,#d8d8d8 98%,#c4c4c4 99%,#adadad 100%) !important;
+	background: linear-gradient(to bottom,  #f5f5f5 0%,#f7f7f7 7%,#f5f5f5 9%,#f6f6f6 47%,#f4f4f4 54%,#f5f5f5 66%,#f7f7f7 67%,#f5f5f5 68%,#f6f6f6 95%,#f1f1f1 96%,#e7e7e7 97%,#d8d8d8 98%,#c4c4c4 99%,#adadad 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#adadad',GradientType=0 );
+	color: #333333 !important;
+}
+
+.layout_social .fixed-top.navbar.bg-light .top_modules a,
+.layout_social .fixed-top.navbar.bg-dark .top_modules a,
+.layout_basic .top_modules a,
+.layout_classic .top_modules.bg-dark a,
+.layout_basic .top_modules .btn-link,
+.layout_classic .top_modules.bg-dark .btn-link,
+.top_modules a, .top_modules .btn-link,
+.navbar-dark h2.sitesubtitle {
+	color: #333333 !important;
+}
+
+/*.layout_fixed_top_modules #top_modules,
+.navbar-fixed-top .container,
+.navbar.bg-light,
+.navbar-light:not(#topbar),
+.navbar.bg-dark,
+.navbar-dark:not(#topbar),
+.topbar .nav > li,*/
+.btn:not(.btn-link),
+/*.nav-tabs > li > a,*/
+.input-group-addon,
+.siteloginbar_popup .dropdown-menu /*,
+.titleb*/ {
+	background: #f5f5f5;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #f7f7f7 7%, #f5f5f5 9%, #f6f6f6 47%, #f4f4f4 54%, #f5f5f5 66%, #f7f7f7 67%, #f5f5f5 68%, #f6f6f6 95%, #f1f1f1 96%, #e7e7e7 97%, #d8d8d8 98%, #c4c4c4 99%, #adadad 100%);
+	background: -webkit-linear-gradient(top, #f5f5f5 0%,#f7f7f7 7%,#f5f5f5 9%,#f6f6f6 47%,#f4f4f4 54%,#f5f5f5 66%,#f7f7f7 67%,#f5f5f5 68%,#f6f6f6 95%,#f1f1f1 96%,#e7e7e7 97%,#d8d8d8 98%,#c4c4c4 99%,#adadad 100%);
+	background: linear-gradient(to bottom, #f5f5f5 0%,#f7f7f7 7%,#f5f5f5 9%,#f6f6f6 47%,#f4f4f4 54%,#f5f5f5 66%,#f7f7f7 67%,#f5f5f5 68%,#f6f6f6 95%,#f1f1f1 96%,#e7e7e7 97%,#d8d8d8 98%,#c4c4c4 99%,#adadad 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#adadad',GradientType=0 );}
+
+.navbar-dark .navbar-brand {
+	color: rgba(0, 0, 0, 0.9);
+}
+
+.topbar .nav-link,
+.navbar-dark .nav-link,
+.navbar-light .nav-link,
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+/*.navbar-light .navbar-nav > .open > a,
+.navbar-light .navbar-nav > .open > a:hover,
+.navbar-light .navbar-nav > .open > a:focus,
+.navbar-light .navbar-nav > .active > a,
+.navbar-light .navbar-nav > .active > a:hover,
+.navbar-light .navbar-nav > .active > a:focus,
+
+.navbar-dark .navbar-nav > .open > a,
+.navbar-dark .navbar-nav > .open > a:hover,
+.navbar-dark .navbar-nav > .open > a:focus,
+.navbar-dark .navbar-nav > .active > a,
+.navbar-dark .navbar-nav > .active > a:hover,
+.navbar-dark .navbar-nav > .active > a:focus{
+	color: #000000;
+	background-color: #e7e7e7;
+}*/
+
+.bg-light .bg-light,
+.bg-dark .bg-dark {
+	background: transparent !important;
+	border: none;
+}
+
+.btn-link:not(.link-list),
+.btn-primary.btn-link {
+	background: none;
+	border: none;
+	color: #666666;
+}
+
+.btn-primary {
+	border-color: #e7e7e7 #454545 #454545 #e7e7e7
+}
+
+/* #header text selectors, if needed */
+.sitetitles {
+	color: #294050;
+}
+
+.sitetitle a,
+.sitetitle a:link,
+.sitetitle a:hover {
+	color: #294050;
+}
+
+/* tiki-top_bar.tpl - menu and search */
+/* *:first-child+html #tiki-top {
+	background-color: #f5f5f5;
+} */
+
+#tiki-top a,
+#tiki-top a:visited {
+	color: #1E7EA6;
+}
+
+#tiki-top a:hover {
+	color: #1E7EA6;
+}
+
+#sitesearchbar {color: #000}
+
+a.flip,
+a.flip:visited {color: #b5dde9}
+	
+a.flip:hover {color: #006699}
+
+.share a,
+.share a:visited {
+	background: transparent url('../images/fold-topright.jpg') 0 0 no-repeat;
+	color: #fff;
+}
+
+.share a:hover {
+	color: #fff;
+}
+
+.share {
+	border-bottom: solid 1px #cce5ff;
+}
+
+.error,
+#error {
+	background: #f8f8ff !important;
+	color: #000;
+}
+
+/* end layout divs, etc. */
+/** Border boxes (if any) **/
+/****** Menus ******/
+/** CSS (suckerfish) menus **/
+
+.cssmenu_vert li ul li,
+.cssmenu_horiz li ul li,
+.header .cssmenu_horiz li ul li {
+	border: 1px solid #aaa;
+	background: #f5f5f5;
+	border-top: 0;
+	margin-bottom: -1px;
+}
+
+.header .cssmenu_horiz li:hover {
+	background: #cce5ff;
+}
+
+.cssmenu_horiz li ul li:first-child,
+.cssmenu_vert li ul li:first-child,
+.header .cssmenu_horiz li ul li:first-child {
+	border-top: 1px solid #aaa;
+}
+
+.cssmenu_horiz li:hover {
+	background: #CCE5FF;
+}
+
+#footer .cssmenu_horiz > li:hover {
+	background: none;
+}
+
+.cssmenu_ver li:hover {
+	background: none;
+}
+
+.cssmenu_horiz a,
+.cssmenu_vert a,
+.cssmenu_vert a:visited {
+	color: #006699;
+}
+
+.cssmenu_vert a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.cssmenu_vert ul a:visited {
+	color: #006699;
+}
+
+.cssmenu_vert ul a:hover {
+	color: #000000;
+}
+
+.header .cssmenu_horiz a,
+.header .cssmenu_horiz a:visited {
+	color: #1E7EA6;
+	border: none;
+}
+
+.header .cssmenu_horiz a:hover {
+	color: #1E7EA6;
+	background: #cce5ff;
+	border: none;
+}
+
+.navbar-light .cssmenu_horiz > li > a {
+	color: #ffffff;
+}
+
+.navbar-light .cssmenu_horiz > li > a:hover {
+	background: transparent;
+}
+
+/** Links in other menus **/
+
+.separator {
+	border-top: 1px solid #bed8f1;
+}
+
+.separator a:link,
+.separator a:visited,
+.separator a:hover {
+	color: #000000;
+}
+
+.linkmenu:hover {
+	color: #000000;
+}
+
+a.linkmodule:hover {
+	color: #000000;
+}
+
+/****** Misc. Global Classes (layout and style) ****/
+
+.bannertext:hover {
+	color: #000000;
+}
+
+.adminanchors {
+	background: #077aa7 !important;
+}
+
+/* New Help section */
+
+.help_section_select {
+	background: white;
+}
+
+.help_sections {
+	background: white;
+}
+
+.help_section {
+	background: #F3FCFE;
+}
+
+#site_report a {
+	border-left: 1px solid #696969;
+	border-right: 1px solid #696969;
+}
+
+/** Modules **/
+
+#col2 .box {
+	background: #cce5ff;
+	border-bottom: 1px solid #bed8f1;
+}
+
+#col3 .box {
+	border-bottom: 1px solid #cfcfcf;
+}
+
+a.flipmodtitle:hover img {
+	border: 1px solid #58A7D2 !important;
+}
+
+/** Other boxes **/
+
+.jumbotron {
+	border: 1px solid #acacac;
+}
+
+.cbox-title {
+	color: black;
+	background: #f5f5f5 url(../images/headerbg.jpg) repeat-x 0 100%;
+}
+
+.cbox-title a:link,
+.cbox-title a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.cbox-title a:hover {
+	color: black;
+	text-decoration: underline
+}
+
+.simplebox {
+	border: 1px solid #aaa;
+	background: #fff;
+}
+
+/***** Tables, Tabs and Lists ****/
+/** Tables **/
+tr.odd {
+	background: #f0f0f0;
+}
+
+tr.even {
+	background: #dcdcdc;
+}
+
+td.odd {
+	background: #f0f0f0;
+	color: #000;
+}
+
+td.even {
+	background: #dcdcdc;
+	color: #000;
+}
+
+/* headings */
+
+.table th {
+	color: black;
+	background: #f5f5f5 url(../images/headerbg.jpg) repeat-x 0 100%;
+}
+
+th a:link,
+th a:visited,
+td.heading a:link,
+td.heading a:visited {
+	color: #000;
+}
+
+.tiki_mytiki .cbox-data th {
+	color: #99c1dc;
+	background: #fff;
+}
+
+.tiki_mytiki .cbox-data th a:link,
+.tiki_mytiki .cbox-data th a:visited {
+	color: #619db8;
+}
+
+a.forumnameread {
+	color: #006699;
+}
+
+/** Tabs **/
+.tabs {
+	border-bottom: solid 1px #1d9ccf !important;
+}
+
+.nav-tabs .nav-item .nav-link {
+	color: #fff; /* #0a6aa6; */
+	background-color:  #1e7ea6; /*#cce5ff; */
+}
+
+.nav-tabs .nav-item .nav-link:active {
+	color: #0a6aa6;
+	background-color: #f2f2f2;
+}
+
+.nav-tabs .nav-item .nav-link:hover {
+	color: #fff;
+	background: #1d9ccf;
+}
+
+/* active (current) tab */
+.nav-tabs .nav-item .nav-link.active {
+	background-color: #aeebff !important;
+	border: solid 1px #1d9ccf !important;
+	color: #000;
+}
+
+.tab-pane {
+	background: #cce5ff;
+}
+
+.tabs {
+	border: 1px solid #F3FCFE;
+}
+
+/*** Feature-specific selectors ***/
+/***** Wiki *****/
+
+h1.pagetitle a,
+h1.pagetitle a:visited,
+h1.pagetitle a:hover,
+a.pagetitle,
+a.pagetitle:visited,
+a.pagetitle:hover {
+	color: #000;
+}
+
+.titlebar {
+	border-top: 1px solid #696969;
+	border-bottom: 1px solid #696969;
+}
+
+.wikitext .fancylist li {
+/*	background: transparent url(../images/list_icon.png) top left no-repeat;*/
+	color: #f90;
+}
+
+.wikitext .fancylist li p {
+	color: #000;
+}
+
+.wikitable {
+	border: 1px solid #A9A9A9;
+}
+
+.wikicell {
+	border: 1px solid #a9a9a9;
+}
+
+/* editable wiki section */
+.split {
+	border: 1px dashed #696969;
+}
+
+#wikihelp-tab table,
+#wikihelp-tab table td {
+	border: solid 1px #696969;
+}
+
+/* Needed esp. for light-on-dark theme */
+
+/* Wiki plugins */
+/* Code plugin  */
+
+.code {
+	border: 1px dashed #a9a9a9;
+	background: #F5F5F5;
+}
+
+.codelisting {
+	background: #F5F5F5;
+	border: 1px dashed #696969;
+}
+
+.codecaption {
+	border: 1px solid #696969;
+	color: #696969;
+	background: #F5F5F5;
+}
+
+/** Wiki tocs **/
+
+.tocnav {
+	background: #EBEBEB;
+}
+
+/* TOC */
+.toc {
+	border-top: 1px dotted #a9a9a9;
+	border-bottom: 1px dotted #a9a9a9;
+}
+
+/* Wiki diff styles */
+.diff td {
+	border: 1px solid #696969;
+}
+
+.diff div {
+	border-top: 1px solid #696969;
+}
+
+.diffheader {
+	background: #696969;
+}
+
+.diffadded {
+	background: #CCFFCC;
+}
+
+.diffdeleted {
+	background: #FFCCCC;
+}
+
+.diffinldel {
+	background: #FFCCCC;
+}
+
+.diffbody {
+	background: #F2F4F5;
+}
+
+.diffchar {
+	color: red;
+}
+
+.page-item.active .page-link {
+	color: #069;
+}
+
+/***** Articles ****/
+.articletopline,
+.articlesubtitle {
+	background: #f5f5f5;
+	color: #000}
+	
+.articletitle h2 {
+	background: #f5f5f5 url(../images/headerbg.jpg) repeat-x 0 100%;
+	color: #000;
+	padding: 10px 5px;
+	margin: 0}
+
+.articletitle h2 a,
+.articletitle h2 a:visited,
+.titleb {
+	color: #000;
+	text-decoration: none;
+	padding: 1.5px;
+}
+
+/***** Blogs *****/
+
+.postinfo a {
+	color: #006699;
+}
+
+
+/***** Forums *****/
+
+.post .postbody {
+	border: solid 1px #a9a9a9;
+	border-top: solid 1px gray;
+	background: #fff;
+}
+
+.post .postbody .content {
+	color: #000;
+	background: #fff !important;
+}
+
+.tiki_blogs .postbody-title,
+.post .postbody-title {
+	background: #f5f5f5 url(../images/headerbg.jpg) repeat-x 0 100%;
+}
+
+.post .postbody-title .title,
+.post .postbody-title .actions,
+.post .postbody-title .title a.link,
+.post .author_info a:link,
+.post .author_info a:visited,
+.post .author_info {
+	color: #000;
+}
+
+.post .postbody .attachments {
+	border-top: 1px dotted #D9D9D9;
+}
+
+.post .contribution {
+	background: #F0F8FF;
+	border: 1px solid #cce5ff;
+}
+
+.post .avatar {
+	border-color: #047aaa #047aaa #42cffa #42cffa;
+}
+
+.forum_actions .actions {
+	background: #cce5ff;
+}
+
+.forum_actions .headers .title {
+	background: #233a48;
+	color: #fff;
+}
+
+/* Comments */
+
+/* Comments moderation */
+.post-approved-n {
+	border-left: 3px dotted blue;
+}
+
+.post-approved-r {
+	border-left: 3px double red;
+}
+
+/***** Categories *****/
+
+/***** Tags (freetags) *****/
+
+/***** File Galleries *****/
+
+/***** Trackers *****/
+
+
+/* also for categorize.tpl */
+.multiselect {
+	border: 1px solid #696969;
+}
+
+/***** Calendar *****/
+/* Overrides calendar.css, etc. */
+.calprio1 a,
+.calprio2 a,
+.calprio3 a,
+.calprio4 a,
+.calprio5 a,
+.calprio6 a,
+.calprio7 a,
+.calprio8 a,
+.calprio9 a {
+	color: #006699;
+}
+
+.buttonon a,
+.calbuttonon a,
+.calbuttonoff a {
+	color: #006699;
+}
+
+.box-data .fc a.today,
+.box-data td a.today {
+	background: #D4D0C8;
+	border: solid 1px #696969;
+}
+
+.calendarweek td.heading.calHeading a:link,
+.calendarweek td.heading.calHeading a:visited {
+	color: #5ae0ff;
+}
+
+.calinput {
+	background: #223845;
+}
+
+.calfocuson + .calcontent {
+	background: #F5F5F5;
+}
+
+th.days {
+	color: #006699;
+}
+
+.caltable .weeks {
+	background: #1b3a50;
+	color: #cce5ff;
+}
+
+.caltable .odd,
+.caltable .even {
+	border: 1px solid #a9a9a9;
+}
+
+.caltable .odd,
+table.tablesorter thead tr.tablesorter-filter-row {
+	background: #f0f0f0;
+}
+
+.caltable .even {
+	background: #dcdcdc;
+}
+
+/*****  Polls  *****/
+
+.pollr {
+	color: black;
+}
+
+/***** FAQs *****/
+
+/***** Quizzes *****/
+
+/***** Shoutbox *****/
+
+/***** Directory *****/
+
+.dircategs {
+	border: 1px solid #696969;
+}
+
+
+/***** Messages *****/
+.prio1,
+.prio2,
+.prio3,
+.prio4,
+.prio5 {
+	border: 1px solid #a9a9a9;
+}
+
+.prio1 {
+	background: #F7F9CA;
+}
+
+.prio2 {
+	background: #F7F9EA;
+}
+
+.prio3 {
+	background: #F7F9FA;
+}
+
+.prio4 {
+	background: #F7F9FD;
+}
+
+.prio5 {
+	background: #F7F9FF;
+}
+
+.messureadflag {
+	background: #a9a9a9;
+}
+
+.messureadhead {
+	background: #dcdcdc;
+}
+
+.messureadbody {
+	background: #dcdcdc;
+}
+
+.readlink {
+	color: black;
+}
+
+/***** Sheets *****/
+
+.plugin-form-float {
+	border: solid 2px #696969;
+}
+
+/***** Ajax *****/
+
+/***** TikiSheet Default Style *****/
+.default thead td,
+.default tfoot td {
+	background: #223845;
+	color: #cce5ff;
+}
+
+/***** mypage *****/
+
+/* css/admin.css overrides */
+a.admbox {
+	border: 1px solid #223845;
+	background-color: #f0f0f0;
+}
+
+a.admbox:hover,
+a.admbox:focus,
+a.admbox:active {
+	background-color: #dcdcdc;
+	border: 1px solid #696969;
+}
+
+a.admbox.off {
+	border: 1px solid #a9a9a9;
+}
+
+a.admbox.off:hover,
+a.admbox.off:focus,
+a.admbox.off:active {
+	border: 1px solid #a9a9a9;
+}
+
+/* MiniChat  */
+
+/* end of file */

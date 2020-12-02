@@ -1,0 +1,446 @@
+// $Id$
+
+header.container,
+.middle_outer > .container {
+	margin-bottom: 0;
+}
+
+// Enable topbar backgrounds to extend left and right to contain margins.
+//.topbar,
+//.layout_social .container.middle .topbar, // layout_social
+//.layout_basic .header_container .page-header,
+//.layout_classic .header_container .page-header,
+//.layout_classic .container .topbar {
+//	margin-left: -15px;
+//	margin-right: -15px;
+//}
+
+#top_modules,
+#topbar_modules,
+#pagetop_modules,
+#pagebottom_modules,
+.bottom_modules {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.topbar .navbar { padding: 0; }
+
+#pagetop_modules,
+#pagebottom_modules,
+.bottom_modules {
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+//.bottom_modules {
+//	display: grid;
+//	grid-template-columns: repeat(auto-fill, minmax(273px, 1fr));
+//	grid-gap: 30px;
+//	grid-row-gap: 30px;
+//}
+
+//***** Site Header & Identity *****/
+.box-quickadmin li {
+	font-size: 0.9em;
+}
+
+.box-quickadmin .cssmenu_horiz a {
+	padding: 0 2.25em 0 0;
+}
+
+.box-quickadmin .cssmenu_horiz ul li {
+	padding-left: 1em;
+	//	background-color: $body-bg; (moved to _tiki-selectors.scss)
+}
+
+.mod-share-item {
+	float: left;
+}
+
+.mod-share-item a img {
+	margin-right: .5em;
+}
+
+.mod-share-item.google-root {
+	margin-left: .5em;
+}
+
+.share img {
+	margin-bottom: -5px;
+}
+
+// to improve display of items in months_links module for blogs and articles
+li.archivedate {
+	list-style: none outside none;
+}
+
+.olLayerGoogleV3.olLayerGooglePoweredBy {
+	bottom: 15px !important;
+	visibility: hidden;
+}
+
+// /***** Boxes *****/
+// ** Modules **/
+
+.minichatdiv {
+	font-size: .9em;
+}
+
+// mod-switch_lang
+
+.box-switch_lang .box-data img.highlight {
+	padding: .1em;
+	//	border: .1em solid $alert-danger-border;
+}
+
+//.box-switch_lang .box-data .highlight {
+//	border: .1em solid $alert-danger-border;
+//}
+
+.box-switch_lang li {
+	list-style: none;
+}
+
+.box-switch_lang .box-data a.highlight {
+	font-weight: bold;
+}
+
+.box-switch_lang ul {
+	padding: 0 1em;
+}
+
+.box-switch_lang .panel-body img {
+	margin: .2em;
+	vertical-align: middle;
+}
+
+.box-switch_lang .flags a {
+	margin: .1rem;
+}
+
+.box-switch_lang .flags .unavailable {
+	opacity: .7;
+}
+
+
+// This is kludgy but works for now.
+#col1 .box-search input[type=submit],
+#col1 .box-search input[type=submit]:hover,
+#col2 .box-search input[type=submit],
+#col2 .box-search input[type=submit]:hover,
+#col3 .box-search input[type=submit],
+#col3 .box-search input[type=submit]:hover {
+	margin: 0;
+}
+
+.box-search .input-group {
+	padding: 0;
+}
+
+#col2 .box-search .input-group-append,
+#col3 .box-search .input-group-append { display: inline-block; }
+
+#col2 .box-search .btn-group .btn,
+#col3 .box-search .btn-group .btn {
+	font-size: .6rem;
+}
+
+.box-search .search_mod_buttons {
+	display: none;
+	position: absolute;
+	right: 0;
+	z-index: 3;
+	white-space: nowrap;
+}
+
+// Modules with nobox=y should have same whitespace below as cards do.
+#col2 .module,
+#col3 .module,
+#pagetop_modules .module {
+	margin-bottom: 1.25rem;
+}
+
+.box-forums_most_read_topics .hits {
+	font-style: italic;
+}
+
+.box-since_last_visit_new .ui-tabs .ui-tabs-nav {
+	padding: 0;
+	border: none;
+}
+
+.box-since_last_visit_new .ui-tabs .ui-tabs-nav li {
+	margin-right: 0;
+	text-align: center;
+	width: 22%;
+}
+
+.box-since_last_visit_new .ui-tabs .ui-tabs-nav li a {
+	padding: .3em .2em;
+}
+
+.box-upcoming_events tr:first-child {
+	vertical-align: top;
+}
+
+// /* Twitter module styling */
+.TwitName {
+	font-weight: bold;
+}
+
+.TwitDate a {
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: right;
+	display: block;
+	padding-bottom: 8px;
+}
+
+// /* Facebook module styling */
+.fb-story {
+	font-style: italic;
+}
+
+.fb-date a {
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: right;
+	display: block;
+	padding-bottom: 8px;
+}
+
+.fb-name {
+	font-weight: bold;
+	display: block;
+}
+
+// /* Users_list module styling */
+#role_main .box-users_list {
+	max-width: 100%;
+}
+
+.box-share > div {
+	text-align: center;
+}
+
+.sitelogo img { margin-top: 10px; }
+
+.modules > .module .sitelogo img,
+.sitetitles {
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+.box-logo > div > .sitelogo + .sitetitles { padding-left: 15px; }
+
+.pass a,
+.pass a:visited,
+.pass a:hover,
+.register a,
+.register a:visited,
+.register a:hover,
+.logged-in a,
+li.login_link ul li a {
+	background: none !important;
+}
+
+.siteloginbar_popup img {
+	height: 24px;
+}
+
+.navbar-form .siteloginbar_poppedup .form-control,
+.navbar-form .siteloginbar_poppedup .form-group.text-center{
+	width: 100%;
+}
+
+// /* Center column */
+
+.share {
+	text-align: right;
+}
+
+a.flip,
+a.flip:visited,
+.share a,
+.share a:visited,
+a.flip:hover,
+.share a:hover {
+	font-size: 80%;
+	text-decoration: none;
+}
+
+#rss small {
+	font-size: 1em;
+}
+
+footer.footer .modules > .module:not(.card) {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.alphafilter {
+	display: block;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.alphafilter a {
+	font-size: 120%;
+}
+
+.alphafilter .highlight {
+	font-weight: bold;
+	font-size: 130%;
+}
+
+.top_actions {
+	text-align: right;
+	margin-top: 5px;
+}
+
+#mytabs .ui-tabs-nav {
+	zoom: 0.70;
+}
+
+#mytabs .ui-widget-content {
+	margin-left: -10px;
+	zoom: 0.85;
+}
+
+#mytabs {
+	min-width: 150px;
+}
+
+// /* Password domain module */
+.pwddom_domain_name {
+	font-weight: bold;
+}
+
+.pwddom_username_name {
+	font-weight: bold;
+}
+
+.tiki_login #col1 .box-login_box {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// make all top zone modules "right justified" apart from the first one which usually is the logo
+.top_modules .module:nth-child(2) {
+	margin-left: auto;
+}
+
+div.cvsup {
+	font-size: x-small;
+	text-align: left;
+	//	color: $gray-light; (moved to _tiki-selectors.scss)
+}
+
+
+
+.topbar .form-group {
+	margin-bottom: 0;
+}
+
+//.topbar .form-control, Todo (after navbar update)
+//.topbar .btn,
+//.page-header .box-search .search_mod_magnifier,
+//.page-header .box-search input.form-control {
+//
+//	max-height: $navbar-height * .53;
+//	margin-top: $navbar-height * .12;
+//	margin-bottom: $navbar-height * .10;
+//	padding-top: $navbar-height * .06;
+//	padding-bottom: $navbar-height * .06;
+//	font-size: $navbar-height * .28;
+//
+//}
+
+.navbar-fixed-top,
+.layout_social .topbar_modules {
+	.sitelogo a img {
+		display: inline;
+		margin-top: $navbar-fixed-height / 10;
+		margin-bottom: $navbar-fixed-height / 10;
+		max-height: $navbar-fixed-height / 1.25;
+		width: auto !important;
+	}
+	h1.sitetitle {
+		float: left;
+		font-size: 1.8rem;
+		line-height: 2;
+		margin-bottom: 0;
+		margin-left: 1rem;
+		//		color: $navbar-dark-brand-color; (This and the following commented-out lines moved to _tiki-selectors.scss)
+	}
+	.sitesubtitle {
+		float: left;
+		font-size: 1.4rem;
+		margin-left: 1.5rem;
+	}
+	#topbar_modules {
+		display: inline-block;
+	}
+	select.form-control {
+		margin-top: $navbar-fixed-height / 6;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+	.btn,
+	.btn-link {
+		margin-top: $navbar-fixed-height / 7;
+	}
+	//	.navbar-inverse .navbar-collapse,
+	//	.navbar-inverse .navbar-form,
+	//	.navbar-inverse {
+	//		border-color: transparent;
+	//	}
+}
+
+.navbar-fixed-top,
+#navbar-collapse-social {
+	.navbar {
+		margin-bottom: 0;
+		min-height: 32px;
+
+	}
+}
+
+.box-menu .nav .nav-link {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@include media-breakpoint-up(sm) {
+	.layout_social_modules .navbar-header {
+		margin-top: -34px;
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.box-search {
+		.form-inline .input-group {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			.form-control { width: auto; }
+			.input-group-append { float: left; width: auto; }
+		}
+
+		.panel-body .form-inline .input-group {
+			width: 100%;
+			.input-group-addon, .input-group-append, .form-control {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: breakpoint-max(sm)) {
+	.tiki-admin_modules {
+		.q1 { width: 50%; padding-right: 10px; }
+		.q23 { width: 50%; }
+		.tips em { display: block; word-break: break-word; }
+	}
+}

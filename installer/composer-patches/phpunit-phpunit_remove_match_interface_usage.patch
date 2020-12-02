@@ -1,0 +1,70 @@
+From b57cd45d8d8626d5b9b38547b85094a8a7160712 Mon Sep 17 00:00:00 2001
+From: Graham Campbell <graham@alt-three.com>
+Date: Fri, 10 Jul 2020 14:49:20 +0100
+Subject: [PATCH] Remove match interface
+
+---
+ src/Framework/MockObject/Builder/Match.php    | 26 -------------------
+ .../MockObject/Builder/ParametersMatch.php    | 12 ++++++++-
+ 2 files changed, 11 insertions(+), 27 deletions(-)
+ delete mode 100644 src/Framework/MockObject/Builder/Match.php
+
+diff --git a/src/Framework/MockObject/Builder/Match.php b/src/Framework/MockObject/Builder/Match.php
+deleted file mode 100644
+index d343eacfb..000000000
+--- a/src/Framework/MockObject/Builder/Match.php
++++ /dev/null
+@@ -1,26 +0,0 @@
+-<?php declare(strict_types=1);
+-/*
+- * This file is part of PHPUnit.
+- *
+- * (c) Sebastian Bergmann <sebastian@phpunit.de>
+- *
+- * For the full copyright and license information, please view the LICENSE
+- * file that was distributed with this source code.
+- */
+-namespace PHPUnit\Framework\MockObject\Builder;
+-
+-/**
+- * @internal This class is not covered by the backward compatibility promise for PHPUnit
+- */
+-interface Match extends Stub
+-{
+-    /**
+-     * Defines the expectation which must occur before the current is valid.
+-     *
+-     * @param string $id the identification of the expectation that should
+-     *                   occur before this one
+-     *
+-     * @return Stub
+-     */
+-    public function after($id);
+-}
+diff --git a/src/Framework/MockObject/Builder/ParametersMatch.php b/src/Framework/MockObject/Builder/ParametersMatch.php
+index ae16d7988..707d82551 100644
+--- a/src/Framework/MockObject/Builder/ParametersMatch.php
++++ b/src/Framework/MockObject/Builder/ParametersMatch.php
+@@ -12,8 +12,18 @@
+ /**
+  * @internal This class is not covered by the backward compatibility promise for PHPUnit
+  */
+-interface ParametersMatch extends Match
++interface ParametersMatch extends Stub
+ {
++    /**
++     * Defines the expectation which must occur before the current is valid.
++     *
++     * @param string $id the identification of the expectation that should
++     *                   occur before this one
++     *
++     * @return Stub
++     */
++    public function after($id);
++
+     /**
+      * Sets the parameters to match for, each parameter to this function will
+      * be part of match. To perform specific matches or constraints create a
+--
+2.23.0
+
